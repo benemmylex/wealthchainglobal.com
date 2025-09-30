@@ -35,7 +35,7 @@ include "header.php";
 				</div>
 				<div class="col-lg-6 col-md-5">
 					<div class="banner__thumb" data-aos="fade-left" data-aos-duration="1000">
-						<img src="./assets/images/about/home3/3-dark.png" alt="banner-thumb" class="dark">
+						<img src="./assets/images/about/home3/3-dark.png" alt="banner-thumb" class="dark" style="border-radius: 20px;">
 					</div>
 				</div>
 			</div>
