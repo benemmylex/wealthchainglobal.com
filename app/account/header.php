@@ -363,4 +363,15 @@ $notifCount = $getNotif->rowCount();
         </div>
     </div>
 
-    
+    <script>
+        setTimeout(() => {
+            <?php if (isset($_SESSION['error'])) { ?>
+                toastr.error("<?php echo $_SESSION['error']; ?>");
+                <?php unset($_SESSION['error']); ?>
+            <?php } ?>
+            <?php if (isset($_SESSION['success'])) { ?>
+                toastr.success("<?php echo $_SESSION['success']; ?>");
+                <?php unset($_SESSION['success']); ?>
+            <?php } ?>
+        }, 1000);
+    </script>
