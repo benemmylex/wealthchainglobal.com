@@ -2,8 +2,8 @@
 <title>My Investment | <?= SITE_NAME; ?></title>
 <?php
 /* Output all php errors */
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+/* error_reporting(E_ALL);
+ini_set('display_errors', 1); */
 ?>
 <main class="pt-5 mt-5" id="content">
     <div class="container pt-5">
