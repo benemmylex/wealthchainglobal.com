@@ -241,155 +241,45 @@ include "header.php";
 	<div class="container">
 		<div class="pricing__wrapper">
 			<div class="row g-4 align-items-center">
-				<div class="col-md-6 col-lg-3">
-					<div class="pricing__item" data-aos="fade-right" data-aos-duration="1000">
-						<div class="pricing__item-inner">
-							<div class="pricing__item-content">
-								<!-- pricing top part -->
-								<div class="pricing__item-top">
-									<h6 class="mb-15">Starter</h6>
-									<h4 class="mb-25">$1,000 - $5,000</h4>
-								</div>
-
-								<!-- pricing middle part -->
-								<div class="pricing__item-middle">
-									<ul class="pricing__list">
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											30% ROI</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											24/7 Expert Support</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											Copy Trading</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											10% Referral Earnings</li>
-									</ul>
-
-								</div>
-
-								<!-- pricing bottom part -->
-								<div class="pricing__item-bottom">
-									<a href="signup" class="trk-btn trk-btn--outline">Start now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="pricing__item " data-aos="fade-up" data-aos-duration="1000">
-						<div class="pricing__item-inner active">
-							<div class="pricing__item-content">
-
-								<!-- pricing top part -->
-								<div class="pricing__item-top">
-									<h6 class="mb-15">Silver</h6>
-									<h4 class="mb-25">$5,000 - $50,000</h4>
-								</div>
-
-								<!-- pricing middle part -->
-								<div class="pricing__item-middle">
-									<ul class="pricing__list">
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											45% ROI</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											24/7 Expert Support</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											Copy Trading</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											15% Referral Earnings</li>
-									</ul>
-
-								</div>
-
-								<!-- pricing bottom part -->
-								<div class="pricing__item-bottom">
-									<a href="signup" class="trk-btn trk-btn--outline active">Start now</a>
+				<?php
+				// Fetch live plans from the database
+				try {
+					$stmt = $db_conn->prepare("SELECT * FROM plans WHERE status = 1 ORDER BY min_amt ASC");
+					$stmt->execute();
+					$plans = $stmt->fetchAll(PDO::FETCH_ASSOC);
+				} catch (PDOException $e) {
+					$plans = [];
+				}
+				?>
+				<?php foreach ($plans as $plan): ?>
+					<div class="col-md-6 col-lg-3">
+						<div class="pricing__item" data-aos="fade-up" data-aos-duration="1000">
+							<div class="pricing__item-inner">
+								<div class="pricing__item-content">
+									<div class="pricing__item-top">
+										<h6 class="mb-15"><?= htmlspecialchars($plan['name']); ?></h6>
+										<h4 class="mb-25">$<?= number_format($plan['min_amt']); ?> - $<?= number_format($plan['max_amt']); ?></h4>
+									</div>
+									<div class="pricing__item-middle">
+										<ul class="pricing__list">
+											<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
+												<?= htmlspecialchars($plan['roi']); ?>% ROI</li>
+											<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
+												24/7 Expert Support</li>
+											<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
+												Instant Withdrawal</li>
+											<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
+												<?= htmlspecialchars($plan['short_desc']); ?></li>
+										</ul>
+									</div>
+									<div class="pricing__item-bottom">
+										<a href="signup" class="trk-btn trk-btn--outline">Start now</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="pricing__item" data-aos="fade-left" data-aos-duration="1000">
-						<div class="pricing__item-inner">
-							<div class="pricing__item-content">
-								<!-- pricing top part -->
-								<div class="pricing__item-top">
-									<h6 class="mb-15">Gold</h6>
-									<h5 class="mb-25">$50,000 - $100,000</h5>
-								</div>
-
-								<!-- pricing middle part -->
-								<div class="pricing__item-middle">
-									<ul class="pricing__list">
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											60% ROI</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											24/7 Expert Support</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											Copy Trading</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											20% Referral Earnings</li>
-									</ul>
-
-								</div>
-
-								<!-- pricing bottom part -->
-								<div class="pricing__item-bottom">
-									<a href="signup" class="trk-btn trk-btn--outline">Start now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="pricing__item" data-aos="fade-left" data-aos-duration="1000">
-						<div class="pricing__item-inner">
-							<div class="pricing__item-content">
-								<!-- pricing top part -->
-								<div class="pricing__item-top">
-									<h6 class="mb-15">Platinum</h6>
-									<h5 class="mb-25">$100,000 - above</h5>
-								</div>
-
-								<!-- pricing middle part -->
-								<div class="pricing__item-middle">
-									<ul class="pricing__list">
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											80% ROI</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											24/7 Expert Support</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											Copy Trading</li>
-										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-													class="dark"></span>
-											30% Referral Earnings</li>
-									</ul>
-
-								</div>
-
-								<!-- pricing bottom part -->
-								<div class="pricing__item-bottom">
-									<a href="signup" class="trk-btn trk-btn--outline">Start now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</div>
