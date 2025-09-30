@@ -1,10 +1,10 @@
 <?php include('header.php'); ?>
 <title>My Investment | <?= SITE_NAME; ?></title>
-<style>
-    /* div [data-index] {
-        width: auto !important;
-    } */
-</style>
+<?php
+/* Output all php errors */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <main class="pt-5 mt-5" id="content">
     <div class="container pt-5">
         <div class="row mb-3">
@@ -41,7 +41,13 @@
                                                 <td><?= $_SESSION['symbol']; ?><?= number_format($row1['amount'], 2); ?></td>
                                                 <td><?= $_SESSION['symbol']; ?><?= number_format($row1['profit'], 2); ?></td>
                                                 <td><?= $row1['status'] == 1 ? '<span class="text-success">Active</span>' : ($row1['status'] == 0 ? '<span class="text-warning">Pending</span>' : '<span class="text-danger">Closed</span>'); ?></td>
-                                                <td><a href="#" class="btn btn-sm btn-primary disabled"><span>View</span></a></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-sm btn-primary disabled"><span>View</span></a>
+                                                    <form action="cashout.php" method="post">
+                                                        <input type="hidden" name="investment_id" value="<?= $row1['id']; ?>">
+                                                        <button type="submit" class="btn btn-sm btn-primary danger"><span>Cashout</span></button>
+                                                    </form>
+                                                </td>
                                             </tr>
                                     <?php $n++;
                                         endwhile;
