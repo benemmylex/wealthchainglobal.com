@@ -1,4 +1,4 @@
-<?php 
+<?php
 $currentPage = "index";
 include "header.php";
 ?>
@@ -19,7 +19,7 @@ include "header.php";
 						<div class="banner__content-coin">
 							<img src="./assets/images/banner/home1/3.png" alt="coin icon">
 						</div>
-						<h1 class="banner__content-heading">The right place for online trading on the <span>financial markets</span></h1> 
+						<h1 class="banner__content-heading">The right place for online trading on the <span>financial markets</span></h1>
 						<p class="banner__content-moto">The most convenient trading interface. Instant access to more than 100 ./assets of the world's leading companies.
 						</p>
 						<div class="banner__btn-group btn-group">
@@ -27,23 +27,23 @@ include "header.php";
 								<span><i class="fa-solid fa-sign-in-alt"></i></span>
 							</a>
 							<a href="./signin"
-							class="trk-btn trk-btn--outline22">
-							Sign in <span><i class="fa-solid fa-arrow-right"></i></span> 
-						</a>
+								class="trk-btn trk-btn--outline22">
+								Sign in <span><i class="fa-solid fa-arrow-right"></i></span>
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-6 col-md-5">
-				<div class="banner__thumb" data-aos="fade-left" data-aos-duration="1000">
-					<img src="./assets/images/banner/home1/1.png" alt="banner-thumb" class="dark">
+				<div class="col-lg-6 col-md-5">
+					<div class="banner__thumb" data-aos="fade-left" data-aos-duration="1000">
+						<img src="./assets/images/banner/home1/1.png" alt="banner-thumb" class="dark">
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="banner__shape">
-	<span class="banner__shape-item banner__shape-item--1"><img src="./assets/images/banner/home1/4.png"
-		alt="shape icon"></span>
+	<div class="banner__shape">
+		<span class="banner__shape-item banner__shape-item--1"><img src="./assets/images/banner/home1/4.png"
+				alt="shape icon"></span>
 	</div>
 </section>
 
@@ -153,7 +153,7 @@ include "header.php";
 								<img class="dark" src="assets/images/service/1.png" alt="service-icon">
 							</div>
 							<div class="service__item-content">
-								<h5 > <a class="stretched-link" href="service-details.html">Copy Trading</a> </h5>
+								<h5> <a class="stretched-link" href="service-details.html">Copy Trading</a> </h5>
 								<p class="mb-0">Copy trading allows you to directly copy the positions taken by another trader. You simply copy everything.</p>
 							</div>
 						</div>
@@ -166,7 +166,7 @@ include "header.php";
 								<img class="dark" src="assets/images/service/2.png" alt="service-icon">
 							</div>
 							<div class="service__item-content">
-								<h5 > <a class="stretched-link" href="service-details.html"> Financial Advisory</a> </h5>
+								<h5> <a class="stretched-link" href="service-details.html"> Financial Advisory</a> </h5>
 								<p class="mb-0">We offer financial advice leading to smart trading by automating processes and improving decision-making.
 								</p>
 							</div>
@@ -180,7 +180,7 @@ include "header.php";
 								<img class="dark" src="assets/images/service/3.png" alt="service-icon">
 							</div>
 							<div class="service__item-content">
-								<h5 > <a class="stretched-link" href="service-details.html">Forex Trading</a> </h5>
+								<h5> <a class="stretched-link" href="service-details.html">Forex Trading</a> </h5>
 								<p class="mb-0">Foreign Exchange Market, a global decentralized market for the trading of currencies.</p>
 							</div>
 						</div>
@@ -193,7 +193,7 @@ include "header.php";
 								<img class="dark" src="assets/images/service/4.png" alt="service-icon">
 							</div>
 							<div class="service__item-content">
-								<h5 > <a class="stretched-link" href="service-details.html">Index Trading</a>
+								<h5> <a class="stretched-link" href="service-details.html">Index Trading</a>
 								</h5>
 								<p class="mb-0">The ROI rates as high as up to 41%. Indices contains about 0.24%, thus is rated as a sweet spot.</p>
 							</div>
@@ -207,7 +207,7 @@ include "header.php";
 								<img class="dark" src="assets/images/service/5.png" alt="service-icon">
 							</div>
 							<div class="service__item-content">
-								<h5 > <a class="stretched-link" href="service-details.html">ETF Stocks</a> </h5>
+								<h5> <a class="stretched-link" href="service-details.html">ETF Stocks</a> </h5>
 								<p class="mb-0">Buy stocks, commodities, bonds, and other securities and place them where they will grow.</p>
 							</div>
 						</div>
@@ -220,7 +220,7 @@ include "header.php";
 								<img class="dark" src="assets/images/service/6.png" alt="service-icon">
 							</div>
 							<div class="service__item-content">
-								<h5 > <a class="stretched-link" href="service-details.html">CFDs</a>
+								<h5> <a class="stretched-link" href="service-details.html">CFDs</a>
 								</h5>
 								<p class="mb-0">Trade directly on CFDs without stress. You don't need a digital wallet or an account with an exchange.</p>
 							</div>
@@ -255,17 +255,17 @@ include "header.php";
 								<div class="pricing__item-middle">
 									<ul class="pricing__list">
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										30% ROI</li>
+													class="dark"></span>
+											30% ROI</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										24/7 Expert Support</li>
+													class="dark"></span>
+											24/7 Expert Support</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										Copy Trading</li>
+													class="dark"></span>
+											Copy Trading</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										10% Referral Earnings</li>
+													class="dark"></span>
+											10% Referral Earnings</li>
 									</ul>
 
 								</div>
@@ -293,17 +293,17 @@ include "header.php";
 								<div class="pricing__item-middle">
 									<ul class="pricing__list">
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										45% ROI</li>
+													class="dark"></span>
+											45% ROI</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										24/7 Expert Support</li>
+													class="dark"></span>
+											24/7 Expert Support</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										Copy Trading</li>
+													class="dark"></span>
+											Copy Trading</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										15% Referral Earnings</li>
+													class="dark"></span>
+											15% Referral Earnings</li>
 									</ul>
 
 								</div>
@@ -330,17 +330,17 @@ include "header.php";
 								<div class="pricing__item-middle">
 									<ul class="pricing__list">
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										60% ROI</li>
+													class="dark"></span>
+											60% ROI</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										24/7 Expert Support</li>
+													class="dark"></span>
+											24/7 Expert Support</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										Copy Trading</li>
+													class="dark"></span>
+											Copy Trading</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										20% Referral Earnings</li>
+													class="dark"></span>
+											20% Referral Earnings</li>
 									</ul>
 
 								</div>
@@ -367,17 +367,17 @@ include "header.php";
 								<div class="pricing__item-middle">
 									<ul class="pricing__list">
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										80% ROI</li>
+													class="dark"></span>
+											80% ROI</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										24/7 Expert Support</li>
+													class="dark"></span>
+											24/7 Expert Support</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										Copy Trading</li>
+													class="dark"></span>
+											Copy Trading</li>
 										<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check"
-											class="dark"></span>
-										30% Referral Earnings</li>
+													class="dark"></span>
+											30% Referral Earnings</li>
 									</ul>
 
 								</div>
@@ -442,13 +442,13 @@ include "header.php";
 						<h2>our Commitment to help growing your business</h2>
 						<ul>
 							<li><span><img src="assets/images/about/home3/check.png" alt="check"></span> Building a Better Trading
-							Future</li>
+								Future</li>
 							<li><span><img src="assets/images/about/home3/check.png" alt="check"></span> Provide a Trading
-							Experience</li>
+								Experience</li>
 							<li><span><img src="assets/images/about/home3/check.png" alt="check"></span> The Experts Behind Your
-							Success</li>
+								Success</li>
 							<li><span><img src="assets/images/about/home3/check.png" alt="check"></span> Empowering Traders
-							Worldwide</li>
+								Worldwide</li>
 						</ul>
 						<a href="signup" class="trk-btn trk-btn--border trk-btn--primary">Dive in</a>
 					</div>
@@ -466,7 +466,7 @@ include "header.php";
 
 										<div class="progress">
 											<div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-											aria-valuemax="100"></div>
+												aria-valuemax="100"></div>
 										</div>
 									</div>
 								</div>
@@ -480,99 +480,99 @@ include "header.php";
 </section>
 
 <section class="feature feature--style2 padding-bottom padding-top feature-bg-color bg--cover"
-style="background-image:url(assets/images/feature/home3/bg.png)">
-<div class="section-header section-header--style3 section-header--max57">
-	<h2 class="mb-10 mt-minus-5">Why Choose us?</h2>
-	<p>Here are a few reasons why you should choose <?= SITE_NAME; ?> 
-	</p>
-</div>
-<div class="container">
-	<div class="feature__wrapper">
-		<div class="row g-4 align-items-center">
-			<div class="col-sm-6 col-lg-4">
-				<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
-					<div class="feature__item-inner text-center">
-						<div class="feature__item-thumb">
-							<img class="dark" src="assets/images/feature/home3/1.png" alt="feature-item-icon">
-						</div>
-						<div class="feature__item-content">
-							<h5> Real-time data </h5>
-							<p>Transact Crypto, Forex, ETF's and other investments anywhere at anytime.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
-					<div class="feature__item-inner text-center">
-						<div class="feature__item-thumb">
-							<img class="dark" src="assets/images/feature/home3/2.png" alt="feature-item-icon">
-						</div>
-						<div class="feature__item-content">
-							<h5> 24/7 Online Support</h5>
-							<p>Our team of professionals and Investment experts are always here to support you.</p>
+	style="background-image:url(assets/images/feature/home3/bg.png)">
+	<div class="section-header section-header--style3 section-header--max57">
+		<h2 class="mb-10 mt-minus-5">Why Choose us?</h2>
+		<p>Here are a few reasons why you should choose <?= SITE_NAME; ?>
+		</p>
+	</div>
+	<div class="container">
+		<div class="feature__wrapper">
+			<div class="row g-4 align-items-center">
+				<div class="col-sm-6 col-lg-4">
+					<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
+						<div class="feature__item-inner text-center">
+							<div class="feature__item-thumb">
+								<img class="dark" src="assets/images/feature/home3/1.png" alt="feature-item-icon">
+							</div>
+							<div class="feature__item-content">
+								<h5> Real-time data </h5>
+								<p>Transact Crypto, Forex, ETF's and other investments anywhere at anytime.</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
-					<div class="feature__item-inner text-center">
-						<div class="feature__item-thumb">
-							<img class="dark" src="assets/images/feature/home3/3.png" alt="feature-item-icon">
-						</div>
-						<div class="feature__item-content">
-							<h5> Higher Security </h5>
-							<p>Protection against third party attacks and full data encryption.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
-					<div class="feature__item-inner text-center">
-						<div class="feature__item-thumb">
-							<img class="dark" src="assets/images/feature/home3/4.png" alt="feature-item-icon">
-						</div>
-						<div class="feature__item-content">
-							<h5>Multiple Deposit Options</h5>
-							<p>You can deposit from any crypto wallet and your crypto assets will be stored securely.</p>
+				<div class="col-sm-6 col-lg-4">
+					<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
+						<div class="feature__item-inner text-center">
+							<div class="feature__item-thumb">
+								<img class="dark" src="assets/images/feature/home3/2.png" alt="feature-item-icon">
+							</div>
+							<div class="feature__item-content">
+								<h5> 24/7 Online Support</h5>
+								<p>Our team of professionals and Investment experts are always here to support you.</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
-					<div class="feature__item-inner text-center">
-						<div class="feature__item-thumb">
-							<img class="dark" src="assets/images/feature/home3/7.png" alt="feature-item-icon">
-						</div>
-						<div class="feature__item-content">
-							<h5>Instant Withdrawal</h5>
-							<p>Withdrawals are processed instantly after confirmation.</p>
+				<div class="col-sm-6 col-lg-4">
+					<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
+						<div class="feature__item-inner text-center">
+							<div class="feature__item-thumb">
+								<img class="dark" src="assets/images/feature/home3/3.png" alt="feature-item-icon">
+							</div>
+							<div class="feature__item-content">
+								<h5> Higher Security </h5>
+								<p>Protection against third party attacks and full data encryption.</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
-					<div class="feature__item-inner text-center">
-						<div class="feature__item-thumb">
-							<img class="dark" src="assets/images/feature/home3/6.png" alt="feature-item-icon">
+				<div class="col-sm-6 col-lg-4">
+					<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
+						<div class="feature__item-inner text-center">
+							<div class="feature__item-thumb">
+								<img class="dark" src="assets/images/feature/home3/4.png" alt="feature-item-icon">
+							</div>
+							<div class="feature__item-content">
+								<h5>Multiple Deposit Options</h5>
+								<p>You can deposit from any crypto wallet and your crypto assets will be stored securely.</p>
+							</div>
 						</div>
-						<div class="feature__item-content">
-							<h5>Transparency</h5>
-							<p>Performance statistics, including Requote, Slippage and Order Execution.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4">
+					<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
+						<div class="feature__item-inner text-center">
+							<div class="feature__item-thumb">
+								<img class="dark" src="assets/images/feature/home3/7.png" alt="feature-item-icon">
+							</div>
+							<div class="feature__item-content">
+								<h5>Instant Withdrawal</h5>
+								<p>Withdrawals are processed instantly after confirmation.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4">
+					<div class="feature__item" data-aos="fade-up" data-aos-duration="800">
+						<div class="feature__item-inner text-center">
+							<div class="feature__item-thumb">
+								<img class="dark" src="assets/images/feature/home3/6.png" alt="feature-item-icon">
+							</div>
+							<div class="feature__item-content">
+								<h5>Transparency</h5>
+								<p>Performance statistics, including Requote, Slippage and Order Execution.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="feature__shape">
-	<span class="feature__shape-item feature__shape-item--1"><img src="assets/images/feature/home3/5.png"
-		alt="shape-icon"></span>
+	<div class="feature__shape">
+		<span class="feature__shape-item feature__shape-item--1"><img src="assets/images/feature/home3/5.png"
+				alt="shape-icon"></span>
 	</div>
 </section>
 
@@ -606,39 +606,40 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 			<div class="testimonial__slider2 swiper">
 				<div class="swiper-wrapper">
 					<?php
-                       $getTest = $db_conn->prepare("SELECT * FROM testimonials ORDER BY main_id DESC");
-                       $getTest->execute();
-                       if($getTest->rowCount() < 1){
-                            echo "<p class='text-center justify-content-center'> No comments at this time, check back later</p>";
-                        }else{
-                            while($rowsss = $getTest->fetch(PDO::FETCH_ASSOC)):
-                    ?>
-					<div class="swiper-slide">
-						<div class="testimonial__item testimonial__item--style2">
-							<div class="testimonial__item-inner">
-								<div class="testimonial__item-content">
-									<p class="mb-0">
-										<?= $rowsss['message']; ?>
-									</p>
-									<div class="testimonial__footer">
-										<div class="testimonial__author">
-											<div class="testimonial__author-thumb">
-												<img src="./assets/images/testimonials/<?= $rowsss['image']; ?>" alt="author" class="dark">
+					$getTest = $db_conn->prepare("SELECT * FROM testimonials ORDER BY main_id DESC");
+					$getTest->execute();
+					if ($getTest->rowCount() < 1) {
+						echo "<p class='text-center justify-content-center'> No comments at this time, check back later</p>";
+					} else {
+						while ($rowsss = $getTest->fetch(PDO::FETCH_ASSOC)):
+					?>
+							<div class="swiper-slide">
+								<div class="testimonial__item testimonial__item--style2">
+									<div class="testimonial__item-inner">
+										<div class="testimonial__item-content">
+											<p class="mb-0">
+												<?= $rowsss['message']; ?>
+											</p>
+											<div class="testimonial__footer">
+												<div class="testimonial__author">
+													<div class="testimonial__author-thumb">
+														<img src="./assets/images/testimonials/<?= $rowsss['image']; ?>" alt="author" class="dark">
+													</div>
+													<div class="testimonial__author-designation">
+														<h6><?= $rowsss['fullname']; ?></h6>
+														<span><?= $rowsss['role']; ?></span>
+													</div>
+												</div>
+												<div class="testimonial__quote testimonial__quote--style2">
+													<span><i class="fa-solid fa-quote-right"></i></span>
+												</div>
 											</div>
-											<div class="testimonial__author-designation">
-												<h6><?= $rowsss['fullname']; ?></h6>
-												<span><?= $rowsss['role']; ?></span>
-											</div>
-										</div>
-										<div class="testimonial__quote testimonial__quote--style2">
-											<span><i class="fa-solid fa-quote-right"></i></span>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<?php endwhile; } ?>
+					<?php endwhile;
+					} ?>
 				</div>
 			</div>
 			<div class="swiper-nav swiper-nav--style2">
@@ -654,6 +655,11 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 </section>
 
 
+
+<section class="padding-top padding-bottom">
+	<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+	<div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+</section>
 
 <section class="faq padding-top padding-bottom of-hidden">
 	<div class="section-header section-header--max57">
@@ -674,7 +680,7 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 									<div id="faqBody1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion1">
 										<div class="accordion__body accordion-body">
 											<p class="mb-0">
-												It is likely that you are entering incorrect authentication data. If you can't remember the password to your account, you will need use the password recovery function. Press the button "Forgot password ?"on the account login page, and then follow the instructions. If the email didn't arrive in your Inbox, check your Spam folder. 
+												It is likely that you are entering incorrect authentication data. If you can't remember the password to your account, you will need use the password recovery function. Press the button "Forgot password ?"on the account login page, and then follow the instructions. If the email didn't arrive in your Inbox, check your Spam folder.
 											</p>
 										</div>
 									</div>
@@ -689,7 +695,7 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 									<div id="faqBody2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion1">
 										<div class="accordion__body accordion-body">
 											<p class="mb-0">
-												Copy Stop Loss (CSL) is an instruction to close a copy if the value of the entire copy drops below a specific dollar amount or ratio. You can use this to protect your investment - to automatically sell the copy investment if its value goes down. CSL is mandatory on every copy (both CopyTrader™ and Smart Portfolios). You can set the CSL anywhere between 5% and 95%. 
+												Copy Stop Loss (CSL) is an instruction to close a copy if the value of the entire copy drops below a specific dollar amount or ratio. You can use this to protect your investment - to automatically sell the copy investment if its value goes down. CSL is mandatory on every copy (both CopyTrader™ and Smart Portfolios). You can set the CSL anywhere between 5% and 95%.
 											</p>
 										</div>
 									</div>
@@ -699,13 +705,13 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 								<div class="accordion__item accordion-item">
 									<div class="accordion__header accordion-header" id="faq3">
 										<button class="accordion-button accordion-button--style3 accordion__button collapsed" type="button"
-										data-bs-toggle="collapse" data-bs-target="#faqBody3" aria-expanded="false"
-										aria-controls="faqBody3"><span class="accordion__button-content">What are the disadvantages of online trading? </span></button>
+											data-bs-toggle="collapse" data-bs-target="#faqBody3" aria-expanded="false"
+											aria-controls="faqBody3"><span class="accordion__button-content">What are the disadvantages of online trading? </span></button>
 									</div>
 									<div id="faqBody3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion1">
 										<div class="accordion__body accordion-body">
 											<p class="mb-0"> You don’t need to worry, the interface is user-friendly. Anyone can use it smoothly. Our user manual will help you to solve your problem. <br>If you do find yourself needing some help, feel free to reach out to our support team through our Contact page, or visit our Support Center.
-											.</p>
+												.</p>
 										</div>
 									</div>
 								</div>
@@ -727,7 +733,7 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 								<div class="accordion__item accordion-item">
 									<div class="accordion__header accordion-header" id="faq5">
 										<button class="accordion-button accordion-button--style3 accordion__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqBody5" aria-expanded="false"
-										aria-controls="faqBody5"><span class="accordion__button-content">What is Copy Trading? </span></button>
+											aria-controls="faqBody5"><span class="accordion__button-content">What is Copy Trading? </span></button>
 									</div>
 									<div id="faqBody5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion1">
 										<div class="accordion__body accordion-body">
@@ -746,8 +752,8 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 								<div class="accordion__item accordion-item border-0">
 									<div class="accordion__header accordion-header" id="faq6">
 										<button class="accordion-button accordion-button--style3 accordion__button collapsed" type="button"
-										data-bs-toggle="collapse" data-bs-target="#faqBody6" aria-expanded="false" aria-controls="faqBody6">
-										<span class="accordion__button-content">What level of support do you offer? </span></button>
+											data-bs-toggle="collapse" data-bs-target="#faqBody6" aria-expanded="false" aria-controls="faqBody6">
+											<span class="accordion__button-content">What level of support do you offer? </span></button>
 									</div>
 									<div id="faqBody6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion2">
 										<div class="accordion__body accordion-body">
@@ -760,8 +766,8 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 								<div class="accordion__item accordion-item border-0">
 									<div class="accordion__header accordion-header" id="faq7">
 										<button class="accordion-button accordion-button--style3 accordion__button collapsed" type="button"
-										data-bs-toggle="collapse" data-bs-target="#faqBody7" aria-expanded="false" aria-controls="faqBody7">
-										<span class="accordion__button-content">How do I withdraw my profits? </span></button>
+											data-bs-toggle="collapse" data-bs-target="#faqBody7" aria-expanded="false" aria-controls="faqBody7">
+											<span class="accordion__button-content">How do I withdraw my profits? </span></button>
 									</div>
 									<div id="faqBody7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion2">
 										<div class="accordion__body accordion-body">
@@ -774,8 +780,8 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 								<div class="accordion__item accordion-item border-0">
 									<div class="accordion__header accordion-header" id="faq8">
 										<button class="accordion-button accordion-button--style3 accordion__button collapsed" type="button"
-										data-bs-toggle="collapse" data-bs-target="#faqBody8" aria-expanded="false" aria-controls="faqBody8">
-										<span class="accordion__button-content">Is it safe to share my info here?</span> </button>
+											data-bs-toggle="collapse" data-bs-target="#faqBody8" aria-expanded="false" aria-controls="faqBody8">
+											<span class="accordion__button-content">Is it safe to share my info here?</span> </button>
 									</div>
 									<div id="faqBody8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion2">
 										<div class="accordion__body accordion-body">
@@ -800,7 +806,7 @@ style="background-image:url(assets/images/feature/home3/bg.png)">
 								<div class="accordion__item accordion-item border-0">
 									<div class="accordion__header accordion-header" id="faq10">
 										<button class="accordion-button accordion-button--style3 accordion__button collapsed" type="button"
-										data-bs-toggle="collapse" data-bs-target="#faqBody10" aria-expanded="false" aria-controls="faqBody10"> <span class="accordion__button-content">Do you offer referrals? </span> </button>
+											data-bs-toggle="collapse" data-bs-target="#faqBody10" aria-expanded="false" aria-controls="faqBody10"> <span class="accordion__button-content">Do you offer referrals? </span> </button>
 									</div>
 									<div id="faqBody10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#faqAccordion2">
 										<div class="accordion__body accordion-body">
