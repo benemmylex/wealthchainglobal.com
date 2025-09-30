@@ -190,8 +190,13 @@ $notifCount = $getNotif->rowCount();
                     </a>
                 </li>-->
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="./upgrade">
+                    <a class="sidenav-link" href="./investments">
                         <i class="fas fa-cubes me-2"></i><span> Investment Plans</span>
+                    </a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="./my-investments">
+                        <i class="fas fa-cubes me-2"></i><span> My Investment Plans</span>
                     </a>
                 </li>
                 <li class="sidenav-item">
@@ -357,3 +362,5 @@ $notifCount = $getNotif->rowCount();
             </script>
         </div>
     </div>
+
+    

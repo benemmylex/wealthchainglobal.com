@@ -143,8 +143,8 @@
                         </div>
                         <div class="flex-fill text-center">
                             <div class="rounded-circle">
-                                <a class="text-center" href="investment">
-                                    <p class="small"><i class="fas text-primary fa-cubes"></i><br><span class="" style="font-size: 11px;">Investment</span></p>
+                                <a class="text-center" href="investments">
+                                    <p class="small"><i class="fas text-primary fa-cubes"></i><br><span class="" style="font-size: 11px;">Investments</span></p>
                                 </a>
                             </div>
                         </div>
