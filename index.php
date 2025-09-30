@@ -35,7 +35,7 @@ include "header.php";
 				</div>
 				<div class="col-lg-6 col-md-5">
 					<div class="banner__thumb" data-aos="fade-left" data-aos-duration="1000">
-						<img src="./assets/images/banner/home1/1.png" alt="banner-thumb" class="dark">
+						<img src="./assets/images/about/home3/3-dark.png" alt="banner-thumb" class="dark">
 					</div>
 				</div>
 			</div>
@@ -409,7 +409,7 @@ include "header.php";
 					<div class="about__thumb about__thumb--style4" data-aos="fade-right" data-aos-duration="800">
 						<div class="about__thumb-inner">
 							<div class="about__thumb-image text-center floating-content">
-								<img class="dark" src="assets/images/about/home3/1.png" alt="about-image">
+								<img class="dark" src="assets/images/banner/home1/2-dark.png" alt="about-image">
 								<div class="floating-content__bottom-left floating-content__bottom-left--style3" data-aos="fade-right" data-aos-duration="1000">
 									<div class="floating-content__item floating-content__item--style4">
 										<div class="floating-content__item-thum">
