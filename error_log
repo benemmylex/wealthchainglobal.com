@@ -1,0 +1,31 @@
+[29-Jan-2025 09:13:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php:43
+Stack trace:
+#0 /home/rariblegateway/public_html/frontierScript investment/header.php(1): include()
+#1 /home/rariblegateway/public_html/frontierScript investment/index.php(3): include('/home/rariblega...')
+#2 {main}
+  thrown in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php on line 43
+[29-Jan-2025 09:13:59 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php:43
+Stack trace:
+#0 /home/rariblegateway/public_html/frontierScript investment/header.php(1): include()
+#1 /home/rariblegateway/public_html/frontierScript investment/index.php(3): include('/home/rariblega...')
+#2 {main}
+  thrown in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php on line 43
+[29-Jan-2025 09:14:00 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php:43
+Stack trace:
+#0 /home/rariblegateway/public_html/frontierScript investment/header.php(1): include()
+#1 /home/rariblegateway/public_html/frontierScript investment/index.php(3): include('/home/rariblega...')
+#2 {main}
+  thrown in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php on line 43
+[29-Jan-2025 09:14:00 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php:43
+Stack trace:
+#0 /home/rariblegateway/public_html/frontierScript investment/header.php(1): include()
+#1 /home/rariblegateway/public_html/frontierScript investment/index.php(3): include('/home/rariblega...')
+#2 {main}
+  thrown in /home/rariblegateway/public_html/frontierScript investment/ops/connect.php on line 43
+[29-Jan-2025 09:23:58 America/New_York] PHP Warning:  Use of undefined constant LIVE_CHAT - assumed 'LIVE_CHAT' (this will throw an Error in a future version of PHP) in /home/rariblegateway/public_html/footer.php on line 129
+[29-Jan-2025 09:24:09 America/New_York] PHP Warning:  Use of undefined constant LIVE_CHAT - assumed 'LIVE_CHAT' (this will throw an Error in a future version of PHP) in /home/rariblegateway/public_html/sfooter.php on line 32
+[29-Jan-2025 09:26:07 America/New_York] PHP Warning:  Use of undefined constant LIVE_CHAT - assumed 'LIVE_CHAT' (this will throw an Error in a future version of PHP) in /home/rariblegateway/public_html/sfooter.php on line 32
+[29-Jan-2025 09:41:29 America/New_York] PHP Warning:  Use of undefined constant LIVE_CHAT - assumed 'LIVE_CHAT' (this will throw an Error in a future version of PHP) in /home/rariblegateway/public_html/sfooter.php on line 32
+[29-Jan-2025 09:50:34 America/New_York] PHP Warning:  Use of undefined constant LIVE_CHAT - assumed 'LIVE_CHAT' (this will throw an Error in a future version of PHP) in /home/rariblegateway/public_html/footer.php on line 129
+[29-Jan-2025 09:52:47 America/New_York] PHP Warning:  Use of undefined constant LIVE_CHAT - assumed 'LIVE_CHAT' (this will throw an Error in a future version of PHP) in /home/rariblegateway/public_html/footer.php on line 129
+[29-Jan-2025 09:52:48 America/New_York] PHP Warning:  Use of undefined constant LIVE_CHAT - assumed 'LIVE_CHAT' (this will throw an Error in a future version of PHP) in /home/rariblegateway/public_html/footer.php on line 129

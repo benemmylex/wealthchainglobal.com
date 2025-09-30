@@ -1,0 +1,27 @@
+Go to ops/connect.php to connect database and set necessary changes like 
+
+SITE_URL, SITE_ADDRESS, SITE_NAME, SITE
+Change the above to yours
+
+Scroll down in ops/connect.php and connect mail smtp
+
+
+
+
+
+
+
+Admin URL------
+
+your website link/adminsignin.php
+
+
+PHP version 7.4 
+
+User - admin
+Pass - admin123
+
+contact 
+
+Webcrack Technology 
++2348106081318
