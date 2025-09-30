@@ -50,7 +50,7 @@
                             <div><span class="small">Current day loss</span></div>
                             <div>
                                 <span class="text-danger small">
-                                    <span id="showBal22">-<?= $_SESSION['symbol'].number_format($currdayloss, 2); ?></span>
+                                    <span id="showBal22">-<?= $_SESSION['symbol'] . number_format($currdayloss, 2); ?></span>
                                     <span id="showBal23">*****</span>
                                 </span>
                             </div>
@@ -59,7 +59,7 @@
                             <div><span class="small">All day gain</span></div>
                             <div>
                                 <span class="text-success small">
-                                    <span id="showBal24">+<?= $_SESSION['symbol'].number_format($alldaygain, 2); ?></span>
+                                    <span id="showBal24">+<?= $_SESSION['symbol'] . number_format($alldaygain, 2); ?></span>
                                     <span id="showBal25">*****</span>
                                 </span>
                             </div>
@@ -91,7 +91,7 @@
                             <div><span class="small">Current day profit</span></div>
                             <div>
                                 <span class="text-success small">
-                                    <span id="showBal2">+<?= $_SESSION['symbol'].number_format($currdaypro, 2); ?></span>
+                                    <span id="showBal2">+<?= $_SESSION['symbol'] . number_format($currdaypro, 2); ?></span>
                                     <span id="showBal21">*****</span>
                                 </span>
                             </div>
@@ -126,6 +126,36 @@
         <div class="my-3">
             <div class="shadow-4-strong card border border-2 border-primary">
                 <div class="card-body px-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="flex-fill text-center">
+                            <div class="rounded-circle">
+                                <a class="text-center" href="deposit">
+                                    <p class="small"><i class="fas text-primary fa-donate"></i><br><span class="" style="font-size: 11px;">Deposit</span></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-fill text-center">
+                            <div class="rounded-circle">
+                                <a class="text-center" href="withdrawal">
+                                    <p class="small"><i class="fas text-primary fa-wallet"></i><br><span class="" style="font-size: 11px;">Withdraw</span></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-fill text-center">
+                            <div class="rounded-circle">
+                                <a class="text-center" href="investment">
+                                    <p class="small"><i class="fas text-primary fa-cubes"></i><br><span class="" style="font-size: 11px;">Investment</span></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-fill text-center">
+                            <div class="rounded-circle">
+                                <a class="text-center" href="traders">
+                                    <p class="small"><i class="fas text-primary fa-chart-line"></i><br><span class="" style="font-size: 11px;">Copy Trader</span></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center mb-3 border-primary border-bottom border-1">
                         <div class="flex-fill">
                             <div class="rounded-circle">
@@ -152,36 +182,6 @@
                             <div class="rounded-circle">
                                 <a class="text-center" href="commodities">
                                     <p class="small"><i class="fas text-primary fa-landmark"></i><br><span class="" style="font-size: 11px;">Commodities</span></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="flex-fill text-center">
-                            <div class="rounded-circle">
-                                <a class="text-center" href="deposit">
-                                    <p class="small"><i class="fas text-primary fa-donate"></i><br><span class="" style="font-size: 11px;">Deposit</span></p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="flex-fill text-center">
-                            <div class="rounded-circle">
-                                <a class="text-center" href="withdrawal">
-                                    <p class="small"><i class="fas text-primary fa-wallet"></i><br><span class="" style="font-size: 11px;">Withdraw</span></p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="flex-fill text-center">
-                            <div class="rounded-circle">
-                                <a class="text-center" href="upgrade">
-                                    <p class="small"><i class="fas text-primary fa-cubes"></i><br><span class="" style="font-size: 11px;">Upgrade plan</span></p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="flex-fill text-center">
-                            <div class="rounded-circle">
-                                <a class="text-center" href="traders">
-                                    <p class="small"><i class="fas text-primary fa-chart-line"></i><br><span class="" style="font-size: 11px;">Copy Trader</span></p>
                                 </a>
                             </div>
                         </div>
