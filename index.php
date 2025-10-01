@@ -299,15 +299,15 @@ include "header.php";
 					<div class="about__thumb about__thumb--style4" data-aos="fade-right" data-aos-duration="800">
 						<div class="about__thumb-inner">
 							<div class="about__thumb-image text-center floating-content">
-								<img class="dark" src="assets/images/banner/home1/2-dark.png" alt="about-image">
+								<img class="dark" src="assets/images/about/home3/investment-approved.png" alt="investment-approved">
 								<div class="floating-content__bottom-left floating-content__bottom-left--style3" data-aos="fade-right" data-aos-duration="1000">
 									<div class="floating-content__item floating-content__item--style4">
 										<div class="floating-content__item-thum">
-											<img src="assets/images/about/home3/5.png" alt="author">
+											<img src="assets/images/about/home3/roi-badge.png" alt="roi-badge">
 										</div>
 										<div class="floating-content__item-content">
-											<p>Mobarok Hossain</p>
-											<span>Expert Trader</span>
+											<p>US SEC Approved</p>
+											<span>Best ROI</span>
 										</div>
 									</div>
 								</div>
@@ -318,11 +318,17 @@ include "header.php";
 				<div class="col-md-6">
 					<div class="about__content" data-aos="fade-left" data-aos-duration="800">
 						<div class="about__content-icon">
-							<img src="assets/images/banner/home3/2.png" alt="trade icon">
+							<img src="assets/images/others/do3.webp" alt="investment icon">
 						</div>
-						<h2>Earn up to 80% return on investment</h2>
-						<p class="mb-0">The professionalism of the team and experience have allowed us to create a technological and reliable tool for investors!</p>
-						<a href="about" class="trk-btn trk-btn--border trk-btn--primary">Learn More </a>
+						<h2>Why Invest With Us?</h2>
+						<p class="mb-0">Our investment platform is designed for both new and experienced investors, offering transparent plans and the best ROI rates approved by the US Securities and Exchange Commission (SEC). We prioritize your financial growth and security, ensuring every plan is compliant and delivers real value. Join thousands of satisfied clients who trust us for their investment journey.</p>
+						<ul>
+							<li>Best ROI rates approved by US SEC</li>
+							<li>Fully regulated and transparent process</li>
+							<li>Expert support and guidance</li>
+							<li>Flexible plans for every budget</li>
+						</ul>
+						<a href="about" class="trk-btn trk-btn--border trk-btn--primary">Learn More</a>
 					</div>
 				</div>
 			</div>
@@ -347,7 +353,7 @@ include "header.php";
 					<div class="about__thumb about__thumb--style4" data-aos="fade-left" data-aos-duration="800">
 						<div class="about__thumb-inner">
 							<div class="about__thumb-image text-center floating-content">
-								<img class="dark" src="assets/images/about/home3/2.png" alt="about-image">
+								<img class="dark" src="assets/images/about/home3/do2.webp" alt="about-image">
 								<div class="floating-content__top-left floating-content__top-left--style2" data-aos="fade-left" data-aos-duration="1000">
 									<div class="floating-content__item floating-content__item--style5">
 										<h3> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="90"></span>%
@@ -362,6 +368,38 @@ include "header.php";
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row g-5">
+				<div class="col-md-6">
+					<div class="about__thumb about__thumb--style4" data-aos="fade-right" data-aos-duration="800">
+						<div class="about__thumb-inner">
+							<div class="about__thumb-image text-center floating-content">
+								<img class="dark" src="assets/images/banner/home1/2-dark.png" alt="about-image">
+								<div class="floating-content__bottom-left floating-content__bottom-left--style3" data-aos="fade-right" data-aos-duration="1000">
+									<div class="floating-content__item floating-content__item--style4">
+										<div class="floating-content__item-thum">
+											<img src="assets/images/about/home3/5.png" alt="author">
+										</div>
+										<div class="floating-content__item-content">
+											<p>Mobarok Hossain</p>
+											<span>Expert Trader</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="about__content" data-aos="fade-left" data-aos-duration="800">
+						<div class="about__content-icon">
+							<img src="assets/images/banner/home3/2.png" alt="trade icon">
+						</div>
+						<h2>Earn up to 80% return on investment</h2>
+						<p class="mb-0">The professionalism of the team and experience have allowed us to create a technological and reliable tool for investors!</p>
+						<a href="about" class="trk-btn trk-btn--border trk-btn--primary">Learn More </a>
 					</div>
 				</div>
 			</div>
