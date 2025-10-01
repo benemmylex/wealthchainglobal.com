@@ -551,7 +551,7 @@ include "header.php";
 											<div class="testimonial__footer">
 												<div class="testimonial__author">
 													<div class="testimonial__author-thumb">
-														<img src="assets/images/testimonials/3-dark.png<?= $rowsss['image']; ?>" alt="author" class="dark">
+														<img src="./assets/images/testimonials/<?= $rowsss['image']; ?>" alt="author" class="dark">
 													</div>
 													<div class="testimonial__author-designation">
 														<h6><?= $rowsss['fullname']; ?></h6>
