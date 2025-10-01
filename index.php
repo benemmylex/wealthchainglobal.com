@@ -299,11 +299,11 @@ include "header.php";
 					<div class="about__thumb about__thumb--style4" data-aos="fade-right" data-aos-duration="800">
 						<div class="about__thumb-inner">
 							<div class="about__thumb-image text-center floating-content">
-								<img class="dark" src="assets/images/about/home3/investment-approved.png" alt="investment-approved">
+								<img class="dark" src="assets/images/others/do3.webp" alt="investment-approved">
 								<div class="floating-content__bottom-left floating-content__bottom-left--style3" data-aos="fade-right" data-aos-duration="1000">
 									<div class="floating-content__item floating-content__item--style4">
 										<div class="floating-content__item-thum">
-											<img src="assets/images/about/home3/roi-badge.png" alt="roi-badge">
+											<img src="assets/images/testimonials/2.png" alt="roi-badge">
 										</div>
 										<div class="floating-content__item-content">
 											<p>US SEC Approved</p>
@@ -317,9 +317,9 @@ include "header.php";
 				</div>
 				<div class="col-md-6">
 					<div class="about__content" data-aos="fade-left" data-aos-duration="800">
-						<div class="about__content-icon">
+						<!-- <div class="about__content-icon">
 							<img src="assets/images/others/do3.webp" alt="investment icon">
-						</div>
+						</div> -->
 						<h2>Why Invest With Us?</h2>
 						<p class="mb-0">Our investment platform is designed for both new and experienced investors, offering transparent plans and the best ROI rates approved by the US Securities and Exchange Commission (SEC). We prioritize your financial growth and security, ensuring every plan is compliant and delivers real value. Join thousands of satisfied clients who trust us for their investment journey.</p>
 						<ul>
@@ -551,7 +551,7 @@ include "header.php";
 											<div class="testimonial__footer">
 												<div class="testimonial__author">
 													<div class="testimonial__author-thumb">
-														<img src="./assets/images/testimonials/<?= $rowsss['image']; ?>" alt="author" class="dark">
+														<img src="assets/images/testimonials/3-dark.png<?= $rowsss['image']; ?>" alt="author" class="dark">
 													</div>
 													<div class="testimonial__author-designation">
 														<h6><?= $rowsss['fullname']; ?></h6>
