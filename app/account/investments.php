@@ -44,10 +44,12 @@
                                                 <p class="fw-bold mb-0">ROI</p>
                                                 <span><?= htmlspecialchars($plan['roi']); ?>%</span>
                                             </div>
-                                            <div class="btn btn-primary btn-block mb-1">
-                                                <p class="fw-bold mb-0">Duration</p>
-                                                <span><?= htmlspecialchars($plan['duration']); ?> days</span>
-                                            </div>
+                                            <?php if ($plan['duration'] > 1): ?>
+                                                <div class="btn btn-primary btn-block mb-1">
+                                                    <p class="fw-bold mb-0">Duration</p>
+                                                    <span><?= htmlspecialchars($plan['duration']); ?> days</span>
+                                                </div>
+                                            <?php endif; ?>
                                             <div class="btn btn-primary btn-block mb-1">
                                                 <p class="fw-bold mb-0">Cashout</p>
                                                 <span><?= htmlspecialchars($plan['cashout']); ?> days</span>

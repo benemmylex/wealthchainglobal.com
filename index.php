@@ -262,8 +262,11 @@ include "header.php";
 									</div>
 									<div class="pricing__item-middle">
 										<ul class="pricing__list">
-											<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
-												<?= htmlspecialchars($plan['roi']); ?>% ROI</li>
+											<li class="pricing__list-item">
+												<span>
+													<img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
+												<?= htmlspecialchars($plan['roi']); ?>% ROI
+											</li>
 											<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
 												24/7 Expert Support</li>
 											<li class="pricing__list-item"><span><img src="assets/images/icon/check.svg" alt="check" class="dark"></span>
