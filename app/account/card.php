@@ -23,32 +23,7 @@ include('header.php');
         </div>
 
         <!-- Step 1 Modal: Select Card Type -->
-        <div class="modal fade" id="selectCardTypeModal" tabindex="-1" role="dialog" aria-labelledby="selectCardTypeModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="selectCardTypeModalLabel">Select Card Type</h4>
-                    </div>
-                    <div class="modal-body">
-                        <select class="form-control" id="modal_card_type">
-                            <option value="">-Select card type-</option>
-                            <?php
-                            $sql = $db_conn->prepare("SELECT * FROM card");
-                            $sql->execute();
-                            while ($rows = $sql->fetch(PDO::FETCH_ASSOC)) :
-                            ?>
-                                <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?></option>
-                            <?php endwhile; ?>
-                        </select>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="cardTypeNextBtn">Next</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Step 2 Modal: Payment QR -->
         <div class="modal fade" id="paymentQRModal" tabindex="-1" role="dialog" aria-labelledby="paymentQRModalLabel">
             <div class="modal-dialog modal-lg" role="document">
