@@ -1,3 +1,9 @@
+<?php include('header.php');
+/* Output all php errors */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,7 +156,7 @@
                     <!-- Card Details -->
                     <div class="flex justify-between items-end">
                         <div>
-                            <div class="text-white text-lg font-black tracking-wide"><?php echo $name ?></div>
+                            <div class="text-white text-lg font-black tracking-wide"><?php echo $_SESSION['username'] ?></div>
                         </div>
                         <div class="flex flex-col items-end">
                             <div class="text-white text-xs mb-1">VALID THRU</div>
@@ -187,7 +193,7 @@
                     </div>
                     <div class="flex justify-between items-end">
                         <div>
-                            <div class="text-gray-800 text-lg font-black tracking-wide"><?php echo $name ?></div>
+                            <div class="text-gray-800 text-lg font-black tracking-wide"><?php echo $_SESSION['username'] ?></div>
                         </div>
                         <div class="flex flex-col items-end">
                             <div class="text-gray-700 text-xs mb-1">VALID THRU</div>
@@ -223,7 +229,7 @@
                     </div>
                     <div class="flex justify-between items-end">
                         <div>
-                            <div class="text-black text-lg font-black tracking-wide"><?php echo $name ?></div>
+                            <div class="text-black text-lg font-black tracking-wide"><?php echo $_SESSION['username'] ?></div>
                         </div>
                         <div class="flex flex-col items-end">
                             <div class="text-black text-xs mb-1">VALID THRU</div>
