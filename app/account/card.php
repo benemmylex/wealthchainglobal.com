@@ -33,7 +33,7 @@
                             $sql->execute();
                             while ($rows = $sql->fetch(PDO::FETCH_ASSOC)) :
                             ?>
-                                <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?> - min: <?php echo $rows['min_amount']; ?> max: <?php echo $rows['max_amount']; ?></option>
+                                <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?> - min: $<?php echo $rows['min_amount']; ?> max: $<?php echo $rows['max_amount']; ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>
@@ -132,7 +132,7 @@
                                         $sql->execute();
                                         while ($rows = $sql->fetch(PDO::FETCH_ASSOC)) :
                                         ?>
-                                            <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?> - min: <?php echo $rows['min_amount']; ?> max: <?php echo $rows['max_amount']; ?></option>
+                                            <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?> - min: $<?php echo $rows['min_amount']; ?> max: $<?php echo $rows['max_amount']; ?></option>
                                         <?php endwhile; ?>
                                     </select>
                                 </div>
