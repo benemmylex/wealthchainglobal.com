@@ -1,7 +1,9 @@
-<?php include('header.php');
+<?php 
 /* Output all php errors */
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+include('header.php');
+
 ?>
 
 <title>Fund Card | <?= SITE_NAME; ?></title>
