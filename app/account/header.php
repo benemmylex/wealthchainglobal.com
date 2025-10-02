@@ -373,5 +373,9 @@ $notifCount = $getNotif->rowCount();
                 toastr.success("<?php echo $_SESSION['success']; ?>");
                 <?php unset($_SESSION['success']); ?>
             <?php } ?>
+            <?php if (isset($_SESSION['msg'])) { ?>
+                toastr.info("<?php echo $_SESSION['msg']; ?>");
+                <?php unset($_SESSION['msg']); ?>
+            <?php } ?>
         }, 1000);
     </script>
