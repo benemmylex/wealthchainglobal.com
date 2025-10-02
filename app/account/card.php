@@ -1,10 +1,4 @@
-<?php 
-/* Output all php errors */
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-include('header.php');
-
-?>
+<?php include('header.php'); ?>
 
 <title>Fund Card | <?= SITE_NAME; ?></title>
 <main class="mt-5 pt-5 pb-3" id="content">
@@ -39,7 +33,7 @@ include('header.php');
                             $sql->execute();
                             while ($rows = $sql->fetch(PDO::FETCH_ASSOC)) :
                             ?>
-                                <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?></option>
+                                <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?> - min: <?php echo $rows['min_amount']; ?> max: <?php echo $rows['max_amount']; ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>
@@ -138,7 +132,7 @@ include('header.php');
                                         $sql->execute();
                                         while ($rows = $sql->fetch(PDO::FETCH_ASSOC)) :
                                         ?>
-                                            <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?></option>
+                                            <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?> - min: <?php echo $rows['min_amount']; ?> max: <?php echo $rows['max_amount']; ?></option>
                                         <?php endwhile; ?>
                                     </select>
                                 </div>
