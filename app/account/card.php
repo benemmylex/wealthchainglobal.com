@@ -25,57 +25,6 @@ include('header.php');
         <!-- Step 1 Modal: Select Card Type -->
         
         <!-- Step 2 Modal: Payment QR -->
-        <div class="modal fade" id="paymentQRModal" tabindex="-1" role="dialog" aria-labelledby="paymentQRModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="paymentQRModalLabel">Make Payment</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <?php
-                            $sql = $db_conn->prepare("SELECT * FROM crypto");
-                            $sql->execute();
-                            while ($crypto = $sql->fetch(PDO::FETCH_ASSOC)) : ?>
-                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                    <div class="card mb-4">
-                                        <div class="card-body">
-                                            <h5 class="text-center">Pay With <?php echo $crypto['crypto_name']; ?></h5>
-                                            <img src="../../assets/images/wallets/<?php echo $crypto['barcode']; ?>" width="150"
-                                                height="150" class="center-block d-block mx-auto mb-3" alt="QR Code">
-                                            <div class="alert alert-light text-center mt-3">
-                                                <p class="text-bold mb-1">Wallet Address</p>
-                                                <span id="address-<?php echo $crypto['id']; ?>">
-                                                    <?php echo $crypto['wallet_addr']; ?> </span>
-                                            </div>
-                                            <button class="btn btn-primary btn-lg btn-block mt-2"
-                                                onclick="copyToClipboard('<?php echo $crypto['wallet_addr']; ?>')"><i
-                                                    class='fa fa-copy'></i> Click To Copy Address</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endwhile; ?>
-                        </div>
-                        <script>
-                            function copyToClipboard(text) {
-                                var tempInput = document.createElement('input');
-                                tempInput.value = text;
-                                document.body.appendChild(tempInput);
-                                tempInput.select();
-                                document.execCommand('copy');
-                                document.body.removeChild(tempInput);
-                                toastr && toastr.info('Address Copied', 'Info');
-                            }
-                        </script>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success" id="iHavePaidBtn">I have Paid</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Step 3 Modal: Payment Form -->
         <div class="modal fade" id="paymentFormSectionModal" tabindex="-1" role="dialog"
