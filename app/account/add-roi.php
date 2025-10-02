@@ -18,7 +18,11 @@ foreach ($investments as $inv) {
 	$start = strtotime($inv['start']);
 	$now = time();
 	$days_passed = floor(($now - $start) / 86400);
-	if ($days_passed < 1 || $days_passed > $duration) continue; // Only increment once per day, up to duration
+	echo "Processing investment ID $inv_id for user $uid: $days_passed days passed.\n";
+	$is_days_passed = $days_passed < 1 || $days_passed > $duration;
+	echo $is_days_passed ? "Skipping (not in valid range).\n" : "Valid for ROI increment.\n";
+	// Skip if no days have passed or duration exceeded
+	if ($is_days_passed) continue; // Only increment once per day, up to duration
 
 	// Calculate daily ROI
 	$total_expected_profit = ($roi / 100.0) * $amount;
