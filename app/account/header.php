@@ -201,7 +201,7 @@ $notifCount = $getNotif->rowCount();
                 </li>
                 <li class="sidenav-item">
                     <a class="sidenav-link" href="./card">
-                        <i class="fas fa-cubes me-2"></i><span> Fund Card</span>
+                        <i class="fas fa-credit-card me-2"></i><span> Fund Card</span>
                     </a>
                 </li>
                 <li class="sidenav-item">

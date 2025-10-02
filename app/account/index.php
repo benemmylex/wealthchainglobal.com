@@ -150,8 +150,8 @@
                         </div>
                         <div class="flex-fill text-center">
                             <div class="rounded-circle">
-                                <a class="text-center" href="traders">
-                                    <p class="small"><i class="fas text-primary fa-chart-line"></i><br><span class="" style="font-size: 11px;">Copy Trader</span></p>
+                                <a class="text-center" href="verification">
+                                    <p class="small"><i class="fas text-primary fa-user-check"></i><br><span class="" style="font-size: 11px;">KYC</span></p>
                                 </a>
                             </div>
                         </div>
@@ -159,8 +159,8 @@
                     <div class="d-flex justify-content-between align-items-center mb-3 border-primary border-bottom border-1">
                         <div class="flex-fill">
                             <div class="rounded-circle">
-                                <a class="text-center" href="chart">
-                                    <p class="small"><i class="fas text-primary fa-chart-pie"></i><br><span class="" style="font-size: 11px;">Place Trade</span></p>
+                                <a class="text-center" href="card">
+                                    <p class="small"><i class="fas text-primary fa-credit-card"></i><br><span class="" style="font-size: 11px;">Fund Card</span></p>
                                 </a>
                             </div>
                         </div>
