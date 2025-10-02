@@ -55,16 +55,6 @@ include('header.php');
                                 </div>
                                 <div class="form-group">
                                     <label>Select Card Type</label>
-                                    <select class="form-control" name="card_type" id="card_type" required>
-                                        <option value="">-Select card type-</option>
-                                        <?php
-                                        $sql = $db_conn->prepare("SELECT * FROM card");
-                                        $sql->execute();
-                                        while ($rows = $sql->fetch(PDO::FETCH_ASSOC)) :
-                                        ?>
-                                            <option value="<?php echo $rows['name']; ?>"><?php echo $rows['name']; ?></option>
-                                        <?php endwhile; ?>
-                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Transaction ID</label>
