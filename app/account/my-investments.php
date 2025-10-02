@@ -43,10 +43,13 @@ ini_set('display_errors', 1); */
                                                 <td><?= $row1['status'] == 1 ? '<span class="text-success">Active</span>' : ($row1['status'] == 0 ? '<span class="text-warning">Pending</span>' : '<span class="text-danger">Closed</span>'); ?></td>
                                                 <td>
                                                     <a href="#" class="btn btn-sm btn-primary disabled"><span>View</span></a>
-                                                    <form action="cashout.php" method="post">
-                                                        <input type="hidden" name="investment_id" value="<?= $row1['id']; ?>">
-                                                        <button type="submit" class="btn btn-sm btn-primary danger"><span>Cashout</span></button>
-                                                    </form>
+                                                    &nbsp;
+                                                    <?php if ($row1['status'] == 1) { ?>
+                                                        <form action="cashout.php" method="post">
+                                                            <input type="hidden" name="investment_id" value="<?= $row1['id']; ?>">
+                                                            <button type="submit" class="btn btn-sm btn-primary danger"><span>Cashout</span></button>
+                                                        </form>
+                                                    <?php } ?>
                                                 </td>
                                             </tr>
                                     <?php $n++;
