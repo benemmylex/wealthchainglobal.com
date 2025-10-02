@@ -1,5 +1,9 @@
+<?php include('header.php');
+/* Output all php errors */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 
-<?php include('header.php'); ?>
 <title>Fund Card | <?= SITE_NAME; ?></title>
 <main class="mt-5 pt-5 pb-3" id="content">
     <div class="container pt-5">
@@ -71,15 +75,15 @@
                     <?php endwhile; ?>
                 </div>
                 <script>
-                function copyToClipboard(text) {
-                    var tempInput = document.createElement('input');
-                    tempInput.value = text;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(tempInput);
-                    toastr && toastr.info('Address Copied', 'Info');
-                }
+                    function copyToClipboard(text) {
+                        var tempInput = document.createElement('input');
+                        tempInput.value = text;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        toastr && toastr.info('Address Copied', 'Info');
+                    }
                 </script>
             </div>
             <div class="modal-footer">
@@ -104,7 +108,7 @@
                             <label>Select Payment Method</label>
                             <select class="form-control" name="payment_method" id="payment_method" required>
                                 <option class="" disabled selected>--Select payment method--</option>
-                                <?php 
+                                <?php
                                 $sql = $db_conn->prepare("SELECT * FROM crypto");
                                 $sql->execute();
                                 while ($rows = $sql->fetch(PDO::FETCH_ASSOC)) :
