@@ -1,4 +1,4 @@
-<?php
+<?php include '../../ops/connect.php';
 /* Output all php errors */
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -140,8 +140,8 @@ ini_set('display_errors', 1);
                     <!-- Company Logo and Name -->
                     <div class="flex justify-end items-start mb-4">
                         <div class="text-right">
-                            <div class="flex justify-end font-['Pacifico'] text-white text-2xl mb-1"><img src="<?= base_url(); ?>assets/general/images/favicon.png" style="height: 30px;" alt="Logo" /></div>
-                            <div class="text-white text-sm font-black tracking-wide"><?= SITE_TITLE; ?></div>
+                            <div class="flex justify-end font-['Pacifico'] text-white text-2xl mb-1"><img src="assets/images/logo-white.png" style="height: 30px;" alt="Logo" /></div>
+                            <div class="text-white text-sm font-black tracking-wide"><?= SITE_NAME; ?></div>
                         </div>
                     </div>
                     <!-- Card Number -->
@@ -179,8 +179,8 @@ ini_set('display_errors', 1);
                 <div class="credit-card silver-card rounded-xl shadow-xl p-6 relative z-10">
                     <div class="flex justify-end items-start mb-4">
                         <div class="text-right">
-                            <div class="flex justify-end font-['Pacifico'] text-gray-700 text-2xl mb-1"><img src="<?= base_url(); ?>assets/general/images/favicon.png" style="height: 30px;" alt="Logo" /></div>
-                            <div class="text-gray-700 text-sm font-medium tracking-wide"><?= SITE_TITLE; ?></div>
+                            <div class="flex justify-end font-['Pacifico'] text-gray-700 text-2xl mb-1"><img src="<?= base_url(); ?>assets/images/logo-white.png" style="height: 30px;" alt="Logo" /></div>
+                            <div class="text-gray-700 text-sm font-medium tracking-wide"><?= SITE_NAME; ?></div>
                         </div>
                     </div>
                     <div class="mb-4">
@@ -215,8 +215,8 @@ ini_set('display_errors', 1);
                 <div class="credit-card platinum-card rounded-xl shadow-xl p-6 relative z-10">
                     <div class="flex justify-end items-start mb-4">
                         <div class="text-right">
-                            <div class="flex justify-end font-['Pacifico'] text-gray-800 text-2xl mb-1"><img src="<?= base_url(); ?>assets/general/images/favicon.png" style="height: 30px;" alt="Logo" /></div>
-                            <div class="text-black text-sm font-medium tracking-wide"><?= SITE_TITLE; ?></div>
+                            <div class="flex justify-end font-['Pacifico'] text-gray-800 text-2xl mb-1"><img src="<?= base_url(); ?>assets/images/logo-white.png" style="height: 30px;" alt="Logo" /></div>
+                            <div class="text-black text-sm font-medium tracking-wide"><?= SITE_NAME; ?></div>
                         </div>
                     </div>
                     <div class="mb-4">
