@@ -235,9 +235,30 @@
         }
     });
 </script>
-<!-- Smartsupp Live Chat script -->
 
-<noscript> Powered by <a href=“https://<?= SITE_ADDRESS; ?>” target=“_blank”><?= SITE_NAME; ?></a></noscript>
-<!-- End Smartsupp Live Chat script -->
+<?= LIVE_CHAT; ?>
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '35d12ac95bc66d7c038e1699a204e5c21517fdb5';
+    window.smartsupp || (function(d) {
+        var s, c, o = smartsupp = function() {
+            o._.push(arguments)
+        };
+        o._ = [];
+        s = d.getElementsByTagName('script')[0];
+        c = d.createElement('script');
+        c.type = 'text/javascript';
+        c.charset = 'utf-8';
+        c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?';
+        s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
+
+<noscript> Powered by <a href=“https://www.<?= SITE_ADDRESS; ?>” target=“_blank”><?= SITE_NAME ?></a></noscript>
+
+
 
 </html>

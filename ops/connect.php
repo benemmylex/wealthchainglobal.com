@@ -24,6 +24,7 @@ define("SITE", "Wealth Chain Global");
 define("SITE_EMAIL", "support@" . SITE_ADDRESS);
 
 // define("LIVE_CHAT", '<script src="//code.tidio.co/" async></script>');
+ define("LIVE_CHAT", '');
 
 define("ADDRESS", "SITE PHYSICAL ADDRESS"); //IF ANY
 
