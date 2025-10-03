@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
 } else {
     $request = filter_var(htmlentities($_POST['request']), FILTER_UNSAFE_RAW);
     switch ($request) {
-            //User Registration without referral
+        //User Registration without referral
         case 'signup':
             $mem_id = str_pad(mt_rand(1, 9999999), 7, '0', STR_PAD_LEFT);
             $fullname = filter_var(htmlentities($_POST['fullname']), FILTER_UNSAFE_RAW);
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
 
                                         //===================================== Second Mail====================================================//
 
-                                        $mail2->addAddress(SITE_EMAIL, "New User Registration"); // Set the recipient of the message.
+                                        $mail2->addAddress(SITE_ADMIN_EMAIL, "New User Registration"); // Set the recipient of the message.
                                         $mail2->Subject = 'New User Registration!! ' . $fullname; // The subject of the message.
                                         $mail2->isHTML(true);
                                         $message2 .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
@@ -269,7 +269,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
 
                                     //===================================== Second Mail====================================================//
 
-                                    $mail2->addAddress(SITE_EMAIL, "New User Registration"); // Set the recipient of the message.
+                                    $mail2->addAddress(SITE_ADMIN_EMAIL, "New User Registration"); // Set the recipient of the message.
                                     $mail2->Subject = 'New User Registration!! ' . $fullname; // The subject of the message.
                                     $mail2->isHTML(true);
                                     $message2 .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
@@ -387,7 +387,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
 
                                 //===================================== Second Mail====================================================//
 
-                                $mail2->addAddress(SITE_EMAIL, "New User Registration"); // Set the recipient of the message.
+                                $mail2->addAddress(SITE_ADMIN_EMAIL, "New User Registration"); // Set the recipient of the message.
                                 $mail2->Subject = 'New User Registration!! ' . $fullname; // The subject of the message.
                                 $mail2->isHTML(true);
                                 $message2 .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
@@ -592,7 +592,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                 }
             }
             break;
-            //sending password reset notification
+        //sending password reset notification
         case 'forgot-password':
             $email = filter_var(htmlentities($_POST['email']), FILTER_UNSAFE_RAW);
 
@@ -973,6 +973,35 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     $insert->bindParam(":mem_id", $mem_id, PDO::PARAM_STR);
                     $insert->bindParam(":account", $accts, PDO::PARAM_STR);
                     $insert->execute();
+
+                                        $fullname = $_SESSION['fullname'];
+                    $email = $_SESSION['email'];
+                    $mem_id = $_SESSION['mem_id'];
+
+                    //===================================== Second Mail====================================================//
+
+                    $mail2->addAddress(SITE_ADMIN_EMAIL, "New Deposit"); // Set the recipient of the message.
+                    $mail2->Subject = 'New Deposit!! ' . $fullname; // The subject of the message.
+                    $mail2->isHTML(true);
+                    $message2 .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
+                    $message2 .= '<div style="padding: 10px 20px;" align="left"><h4 class="title-head hidden-xs">New Deposit</h4><br>';
+                    $message2 .= '<div class="table-responsive"><table class="table table-striped table-hover">';
+                    $message2 .= "<tr><td><strong>Name:</strong> </td><td>" . $fullname . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($email) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>User Id:</strong> </td><td>" . strip_tags($mem_id) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Transaction Id:</strong> </td><td>" . strip_tags($transc_id) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Amount:</strong> </td><td>" . strip_tags($amount) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Type:</strong> </td><td>" . strip_tags($type) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Account:</strong> </td><td>" . strip_tags($accts) . "</td></tr>";
+                    $message2 .= "</table></div>";
+                    $message2 .= '<center><a href="https://www.' . SITE_ADDRESS . 'adminsignin" style="background-color: #fffff0; color: #66f; border-radius: 5px; padding: 12px 12px; text-decoration: none;">Login account</a></center><br>';
+                    $message2 .= '<p>If this was a mistake, please ignore.</p>';
+                    $message2 .= "<p>Kind regards,</p>";
+                    $message2 .= "<p><b>" . SITE_NAME . ".</b></p><br>";
+                    $message2 .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
+                    $mail2->Body = $message2; // Set a plain text body.
+                    $mail2->send();
+
                 } else {
                     echo json_encode([
                         'status' => 'error',
@@ -1039,6 +1068,34 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                 $insertTrans->bindParam(':mem_id', $mem_id, PDO::PARAM_STR);
                 $insertTrans->bindParam(':transc_id', $transc_id, PDO::PARAM_STR);
                 if ($insertTrans->execute()) {
+                    $fullname = $_SESSION['fullname'];
+                    $email = $_SESSION['email'];
+                    $mem_id = $_SESSION['mem_id'];
+
+                    //===================================== Second Mail====================================================//
+
+                    $mail2->addAddress(SITE_ADMIN_EMAIL, "New Deposit"); // Set the recipient of the message.
+                    $mail2->Subject = 'New Deposit!! ' . $fullname; // The subject of the message.
+                    $mail2->isHTML(true);
+                    $message2 .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
+                    $message2 .= '<div style="padding: 10px 20px;" align="left"><h4 class="title-head hidden-xs">New Deposit</h4><br>';
+                    $message2 .= '<div class="table-responsive"><table class="table table-striped table-hover">';
+                    $message2 .= "<tr><td><strong>Name:</strong> </td><td>" . $fullname . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($email) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>User Id:</strong> </td><td>" . strip_tags($mem_id) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Transaction Id:</strong> </td><td>" . strip_tags($transc_id) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Amount:</strong> </td><td>" . strip_tags($amount) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Type:</strong> </td><td>" . strip_tags($type) . "</td></tr>";
+                    $message2 .= "<tr><td><strong>Account:</strong> </td><td>" . strip_tags($accts) . "</td></tr>";
+                    $message2 .= "</table></div>";
+                    $message2 .= '<center><a href="https://www.' . SITE_ADDRESS . 'adminsignin" style="background-color: #fffff0; color: #66f; border-radius: 5px; padding: 12px 12px; text-decoration: none;">Login account</a></center><br>';
+                    $message2 .= '<p>If this was a mistake, please ignore.</p>';
+                    $message2 .= "<p>Kind regards,</p>";
+                    $message2 .= "<p><b>" . SITE_NAME . ".</b></p><br>";
+                    $message2 .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
+                    $mail2->Body = $message2; // Set a plain text body.
+                    $mail2->send();
+
                     echo json_encode([
                         'status' => 'success',
                         'message' => 'Payment proof has been uploaded'
@@ -1147,7 +1204,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         $insert->bindParam(":account", $accts, PDO::PARAM_STR);
                         $insert->execute();
 
-                        $mail->addAddress(SITE_EMAIL, SITE_NAME); // Set the recipient of the message.
+                        $mail->addAddress(SITE_ADMIN_EMAIL, SITE_NAME); // Set the recipient of the message.
                         $mail->Subject = 'Withdrawal Request '; // The subject of the message.
                         $mail->isHTML(true);
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
@@ -1681,7 +1738,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                 ]);
             }
             break;
-            //Start Here
+        //Start Here
         case 'changepassword':
             $mem_id = filter_var(htmlentities($_SESSION['mem_id']), FILTER_UNSAFE_RAW);
             $oldpass = filter_var(htmlentities($_POST['password']), FILTER_UNSAFE_RAW);

@@ -22,11 +22,12 @@ define("SITE_NAME", "Wealth Chain Global");
 define("SITE", "Wealth Chain Global");
 
 define("SITE_EMAIL", "support@" . SITE_ADDRESS);
+define("SITE_ADMIN_EMAIL", "admin@" . SITE_ADDRESS);
 
 // define("LIVE_CHAT", '<script src="//code.tidio.co/" async></script>');
  define("LIVE_CHAT", '');
 
-define("ADDRESS", "SITE PHYSICAL ADDRESS"); //IF ANY
+define("ADDRESS", "Beethovenstraat 505 - 1083 HK - Amsterdam - Noord-Holland"); //IF ANY
 
 
 try {

@@ -76,6 +76,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$upd_stmt->execute();
 
 	$_SESSION['success'] = "Investment plan activated successfully.";
+
+	$fullname = $_SESSION['fullname'];
+	$email = $_SESSION['email'];
+	$mem_id = $_SESSION['mem_id'];
+
+	//===================================== Second Mail====================================================//
+
+	$mail2->addAddress(SITE_ADMIN_EMAIL, "New Plan Activated"); // Set the recipient of the message.
+	$mail2->Subject = 'New Plan Activated!! ' . $fullname; // The subject of the message.
+	$mail2->isHTML(true);
+	$message2 .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
+	$message2 .= '<div style="padding: 10px 20px;" align="left"><h4 class="title-head hidden-xs">New Plan Activation</h4><br>';
+	$message2 .= '<div class="table-responsive"><table class="table table-striped table-hover">';
+	$message2 .= "<tr><td><strong>Name:</strong> </td><td>" . $fullname . "</td></tr>";
+	$message2 .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($email) . "</td></tr>";
+	$message2 .= "<tr><td><strong>User Id:</strong> </td><td>" . strip_tags($mem_id) . "</td></tr>";
+	$message2 .= "<tr><td><strong>Amount:</strong> </td><td>" . strip_tags($amount) . "</td></tr>";
+	$message2 .= "<tr><td><strong>Type:</strong> </td><td>" . strip_tags($type) . "</td></tr>";
+	$message2 .= "<tr><td><strong>Plan:</strong> </td><td>" . strip_tags($plan['name']) . "</td></tr>";
+	$message2 .= "</table></div>";
+	$message2 .= '<center><a href="https://www.' . SITE_ADDRESS . 'adminsignin" style="background-color: #fffff0; color: #66f; border-radius: 5px; padding: 12px 12px; text-decoration: none;">Login account</a></center><br>';
+	$message2 .= '<p>If this was a mistake, please ignore.</p>';
+	$message2 .= "<p>Kind regards,</p>";
+	$message2 .= "<p><b>" . SITE_NAME . ".</b></p><br>";
+	$message2 .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
+	$mail2->Body = $message2; // Set a plain text body.
+	$mail2->send();
+
+
 	header("Location: investments.php");
 	exit();
 }
