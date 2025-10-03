@@ -135,7 +135,7 @@ ini_set('display_errors', 1);
     overflow: scroll;
     width: fit-content;
 ">
-    <div class="w-full max-w-4xl mx-auto md:ml-20">
+    <div class="">
         <div class="flex flex-col md:flex-row items-center justify-center gap-12">
             <div class="">
                 <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Gold Virtual Card</h2>
