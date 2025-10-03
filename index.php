@@ -421,7 +421,10 @@ include "header.php";
 	<div class="container">
 		<div class="feature__wrapper">
 			<div class="row g-4 align-items-center">
-				<div class="feature__item-thumb">
+				<div class="feature__item-thumb" style="
+    display: flex;
+    justify-content: center;
+">
 					<img class="dark" src="assets/images/others/certificate.jpeg" alt="feature-item-icon">
 				</div>
 			</div>
