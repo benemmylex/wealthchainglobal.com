@@ -413,6 +413,30 @@ include "header.php";
 <section class="feature feature--style2 padding-bottom padding-top feature-bg-color bg--cover"
 	style="background-image:url(assets/images/feature/home3/bg.png)">
 	<div class="section-header section-header--style3 section-header--max57">
+		<h2 class="mb-10 mt-minus-5">Certificate of Incorporation</h2>
+		<p><?= SITE_NAME; ?> is a registered company, incorporated under the laws of England. Our certificate of incorporation is a testament to our legitimacy and commitment to providing top-notch services to our clients.
+		</p>
+	</div>
+
+	<div class="container">
+		<div class="feature__wrapper">
+			<div class="row g-4 align-items-center">
+				<div class="feature__item-thumb">
+					<img class="dark" src="assets/images/others/certificate.jpeg" alt="feature-item-icon">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="feature__shape">
+		<span class="feature__shape-item feature__shape-item--1"><img src="assets/images/feature/home3/5.png"
+				alt="shape-icon"></span>
+	</div>
+</section>
+
+<section class="feature feature--style2 padding-bottom padding-top feature-bg-color bg--cover"
+	style="background-image:url(assets/images/feature/home3/bg.png)">
+	<div class="section-header section-header--style3 section-header--max57">
 		<h2 class="mb-10 mt-minus-5">Why Choose us?</h2>
 		<p>Here are a few reasons why you should choose <?= SITE_NAME; ?>
 		</p>

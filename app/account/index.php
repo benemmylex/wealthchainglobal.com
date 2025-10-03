@@ -195,11 +195,30 @@
                 <h4>Top crypto assets</h4>
             </div>
             <div class="card-body">
-                <div id="cryptoAssets"></div>
+                <div id="cryptoAssets">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener nofollow" target="_blank"><span class="blue-text">Crypto markets</span></a><span class="trademark"> by TradingView</span></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                            {
+                                "defaultColumn": "overview",
+                                "screener_type": "crypto_mkt",
+                                "displayCurrency": "USD",
+                                "colorTheme": "dark",
+                                "isTransparent": true,
+                                "locale": "en",
+                                "width": "100%",
+                                "height": 550
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
             </div>
         </div>
 
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="col-lg-12">
                 <div class="card border border-1 border-primary">
                     <div class="card-body">
@@ -250,9 +269,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <!--         <div class="row">
             <div class="col-lg-6 col-md- mb-3">
                 <div class="card border border-1 border-primary">
                     <div class="card-body">
@@ -362,7 +381,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </main>
 
