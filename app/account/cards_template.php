@@ -131,7 +131,10 @@ ini_set('display_errors', 1);
     </style>
 </head>
 
-<body class="flex items-center justify-center p-6">
+<body class="items-center justify-center p-6" style="
+    overflow: scroll;
+    width: fit-content;
+">
     <div class="w-full max-w-4xl mx-auto md:ml-20">
         <div class="flex flex-col md:flex-row items-center justify-center gap-12">
             <div class="">
