@@ -132,9 +132,9 @@ ini_set('display_errors', 1);
 </head>
 
 <body class="flex items-center justify-center p-6">
-    <div class="w-full max-w-4xl mx-auto">
+    <div class="w-full max-w-4xl mx-auto md:ml-20">
         <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-            <div class="w-full md:w-1/3">
+            <div class="">
                 <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Gold Virtual Card</h2>
                 <div class="credit-card gold-card rounded-xl shadow-xl p-6 relative z-10" style="min-width: 420px !important;">
                     <!-- Company Logo and Name -->
@@ -174,7 +174,7 @@ ini_set('display_errors', 1);
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/3">
+            <div class="">
                 <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Silver Virtual Card</h2>
                 <div class="credit-card silver-card rounded-xl shadow-xl p-6 relative z-10" style="min-width: 420px !important;">
                     <div class="flex justify-end items-start mb-4">
@@ -210,7 +210,7 @@ ini_set('display_errors', 1);
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/3">
+            <div class="">
                 <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Platinum Virtual Card</h2>
                 <div class="credit-card platinum-card rounded-xl shadow-xl p-6 relative z-10" style="min-width: 420px !important;">
                     <div class="flex justify-end items-start mb-4">
