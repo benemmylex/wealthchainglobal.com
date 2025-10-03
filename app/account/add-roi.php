@@ -35,7 +35,7 @@ foreach ($investments as $inv) {
 	if ($check->fetchColumn() > 0) continue;
 
 	// Increment investment profit
-	$upd = $db_conn->prepare("UPDATE investment SET profit = profit + :roi WHERE id = :inv_id");
+	$upd = $db_conn->prepare("UPDATE balances SET profit = profit + :roi WHERE mem_id = :inv_id");
 	$upd->bindParam(':roi', $daily_roi);
 	$upd->bindParam(':inv_id', $inv_id, PDO::PARAM_INT);
 	$upd->execute();
