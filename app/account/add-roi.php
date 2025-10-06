@@ -2,7 +2,8 @@
 // This script increments investment profit (not user balance) based on plan ROI and investment amount.
 // To be run as a cronjob every 24 hours.
 include("../../ops/connect.php");
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1); 
 // Get all active investments
 $stmt = $db_conn->prepare("SELECT i.*, p.roi, p.duration FROM investment i JOIN plans p ON i.plan = p.id WHERE i.status = 1");
 $stmt->execute();
