@@ -3,9 +3,9 @@
 // To be run as a cronjob every 24 hours.
 include("../../ops/connect.php");
 error_reporting(E_ALL);
-ini_set('display_errors', 1); 
+ini_set('display_errors', 1);
 // Get all active investments
-$stmt = $db_conn->prepare("SELECT i.*, p.roi, p.duration FROM investment i JOIN plans p ON i.plan = p.id WHERE i.status = 1");
+$stmt = $db_conn->prepare("SELECT i.*, p.roi, p.duration, i.duration AS inv_duration FROM investment i JOIN plans p ON i.plan = p.id WHERE i.status = 1");
 $stmt->execute();
 $investments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -18,7 +18,7 @@ foreach ($investments as $inv) {
 	$profit = $inv['profit'];
 	$start = strtotime($inv['start']);
 	$date_split = explode(" ", $inv['start']);
-	echo "<br> Processing investment ID $inv_id for user $uid: $duration days remaining. Started on $inv[start]\n<br>";
+	echo "<br> Processing investment ID $inv_id for user $uid: $inv[inv_duration] days remaining. Started on $inv[start]\n<br>";
 	if ($duration > 0 && $date_split[0] != date_time('d')) {
 		echo "Skipping (not in valid range).\n<br>";
 		continue;
