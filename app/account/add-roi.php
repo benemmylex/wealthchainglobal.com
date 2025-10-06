@@ -17,7 +17,7 @@ foreach ($investments as $inv) {
 	$profit = $inv['profit'];
 	$start = strtotime($inv['start']);
 	$date_split = explode(" ", $inv['start']);
-	echo "<br> Processing investment ID $inv_id for user $uid: $days_passed days passed.\n<br>";
+	echo "<br> Processing investment ID $inv_id for user $uid: $duration days remaining.\n<br>";
 	if ($duration > 0 && $date_split[0] != date_time('d')) {
 		echo "Skipping (not in valid range).\n<br>";
 		continue;
