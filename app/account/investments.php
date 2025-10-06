@@ -52,7 +52,7 @@
                                             <?php endif; ?>
                                             <div class="btn btn-primary btn-block mb-1">
                                                 <p class="fw-bold mb-0">Cashout</p>
-                                                <span><?= htmlspecialchars($plan['cashout']); ?> days</span>
+                                                <span>Immediately</span>
                                             </div>
                                         </div>
                                         <div class="mb-2">
