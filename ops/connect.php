@@ -25,7 +25,7 @@ define("SITE_EMAIL", "support@" . SITE_ADDRESS);
 define("SITE_ADMIN_EMAIL", "admin@" . SITE_ADDRESS);
 
 // define("LIVE_CHAT", '<script src="//code.tidio.co/" async></script>');
- define("LIVE_CHAT", '');
+define("LIVE_CHAT", '');
 
 define("ADDRESS", "Beethovenstraat 505 - 1083 HK - Amsterdam - Noord-Holland"); //IF ANY
 
@@ -106,4 +106,15 @@ function generate_string($input, $strength)
     }
 
     return $random_string;
+}
+
+function date_time($t = "")
+{
+    if ($t == "") {
+        return date("Y-m-d H:i:s");
+    } elseif ($t == "t" || $t == "T") {
+        return date("H:i:s");
+    } elseif ($t == "d" || $t == "D") {
+        return date("Y-m-d");
+    }
 }
