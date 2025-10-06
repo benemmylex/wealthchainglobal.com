@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$roi = floatval($plan['roi']);
 	$profit = 0 /* ($roi / 100.0) * $amount */;
 	$duration = intval($plan['duration']);
-	if ($type === 1) { // Lifetime
+	if ($duration === 1) { // Lifetime
 		$duration = 3650; // 10 years for lifetime plans
 	}
 	$now = date_time();
