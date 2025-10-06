@@ -45,7 +45,7 @@ foreach ($investments as $inv) {
 	$upd->execute();
 
 	// Increment balances profit
-	$upd = $db_conn->prepare("UPDATE balances SET profit = profit + :roi WHERE uid = :uid");
+	$upd = $db_conn->prepare("UPDATE balances SET profit = profit + :roi WHERE mem_id = :uid");
 	$upd->bindParam(':roi', $daily_roi);
 	$upd->bindParam(':uid', $uid, PDO::PARAM_INT);
 	$upd->execute();
