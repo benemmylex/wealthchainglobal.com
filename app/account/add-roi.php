@@ -16,13 +16,12 @@ foreach ($investments as $inv) {
 	$duration = $inv['duration'];
 	$profit = $inv['profit'];
 	$start = strtotime($inv['start']);
-	$now = time();
-	$days_passed = floor(($now - $start) / 86400);
+	$date_split = explode(" ", $inv['start']);
 	echo "<br> Processing investment ID $inv_id for user $uid: $days_passed days passed.\n<br>";
-	$is_days_passed = $days_passed < 1 || $days_passed > $duration;
-	echo $is_days_passed ? "Skipping (not in valid range).\n<br>" : "Valid for ROI increment.\n<br>";
-	// Skip if no days have passed or duration exceeded
-	if ($is_days_passed) continue; // Only increment once per day, up to duration
+	if ($duration > 0 && $date_split[0] != date_time('d')) {
+		echo $is_days_passed ? "Skipping (not in valid range).\n<br>" : "Valid for ROI increment.\n<br>";
+		continue;
+	}
 
 	// Calculate daily ROI
 	$total_expected_profit = ($roi / 100.0) * $amount;
@@ -35,6 +34,12 @@ foreach ($investments as $inv) {
 	if ($check->fetchColumn() > 0) continue;
 
 	// Increment investment profit
+	$upd = $db_conn->prepare("UPDATE investment SET profit = profit + :roi, duration = duration - 1 WHERE mem_id = :inv_id");
+	$upd->bindParam(':roi', $daily_roi);
+	$upd->bindParam(':inv_id', $inv_id, PDO::PARAM_INT);
+	$upd->execute();
+
+	// Increment balances profit
 	$upd = $db_conn->prepare("UPDATE balances SET profit = profit + :roi WHERE mem_id = :inv_id");
 	$upd->bindParam(':roi', $daily_roi);
 	$upd->bindParam(':inv_id', $inv_id, PDO::PARAM_INT);

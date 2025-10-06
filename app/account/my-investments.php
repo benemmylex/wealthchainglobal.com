@@ -20,6 +20,7 @@ ini_set('display_errors', 1); */
                                     <th class="text-nowrap">Start Date</th>
                                     <th class="text-nowrap">Amount</th>
                                     <th class="text-nowrap">Profit</th>
+                                    <th class="text-nowrap">Duration (Days)</th>
                                     <th class="text-nowrap">Status</th>
                                     <th class="text-nowrap">Action</th>
                                 </thead>
@@ -40,6 +41,7 @@ ini_set('display_errors', 1); */
                                                 <td><?= date('d M, Y', strtotime($row1['start'])); ?></td>
                                                 <td><?= $_SESSION['symbol']; ?><?= number_format($row1['amount'], 2); ?></td>
                                                 <td><?= $_SESSION['symbol']; ?><?= number_format($row1['profit'], 2); ?></td>
+                                                <td><?= $row1['duration'] > 0 ? $row1['duration'] : 'Completed'; ?></td>
                                                 <td><?= $row1['status'] == 1 ? '<span class="text-success">Active</span>' : ($row1['status'] == 0 ? '<span class="text-warning">Pending</span>' : '<span class="text-danger">Closed</span>'); ?></td>
                                                 <td>
                                                     <a href="#" class="btn btn-sm btn-primary disabled m-2"><span>View</span></a>

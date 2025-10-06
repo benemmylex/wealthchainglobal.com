@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['investment_id'])) {
 		exit();
 	}
 
-	$total = floatval($inv['amount']) + floatval($inv['profit']);
+	$total = floatval($inv['amount']) /* + floatval($inv['profit']) */;
 
 	// Credit to user's balance
 	$upd = $db_conn->prepare("UPDATE balances SET available = available + :total WHERE mem_id = :uid");
