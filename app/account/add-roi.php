@@ -2,8 +2,8 @@
 // This script increments investment profit (not user balance) based on plan ROI and investment amount.
 // To be run as a cronjob every 24 hours.
 include("../../ops/connect.php");
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 $today = date_time('d')
 echo "\n\n\n<br><br><br>Starting ROI increment process... for [$today]\n<br>";
 // Get all active investments
