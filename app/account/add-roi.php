@@ -3,7 +3,7 @@
 // To be run as a cronjob every 24 hours.
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include("../../ops/connect.php");
+/* include("../../ops/connect.php");
 $today = date_time('d')
 echo "\n\n\n<br><br><br>Starting ROI increment process... for [$today]\n<br>";
 // Get all active investments
@@ -29,7 +29,7 @@ foreach ($investments as $inv) {
 	echo "Valid for ROI increment.\n<br>";
 	// Calculate daily ROI
 	$total_expected_profit = ($roi / 100.0) * $amount;
-	$daily_roi = $total_expected_profit /* / $duration */;
+	$daily_roi = $total_expected_profit;//  / $duration;
 
 	// Check if already incremented for today
 	$check = $db_conn->prepare("SELECT COUNT(*) FROM roi_log WHERE investment_id = :inv_id AND DATE(credited_at) = CURDATE()");
@@ -59,5 +59,5 @@ foreach ($investments as $inv) {
 	$log->bindParam(':amt', $daily_roi);
 	$log->execute();
 }
-
+ */
 echo "ROI incremented for active investments.";
