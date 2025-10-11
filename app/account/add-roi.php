@@ -4,7 +4,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include("../../ops/connect.php");
-$today = date('d');
+$today = date_time();
 echo "\n\n\n<br><br><br>Starting ROI increment process... for [$today]\n<br>";
 // Get all active investments
 $stmt = $db_conn->prepare("SELECT i.*, p.roi, p.duration, i.duration AS inv_duration FROM investment i JOIN plans p ON i.plan = p.id WHERE i.status = 1");
@@ -37,7 +37,7 @@ foreach ($investments as $inv) {
 	$check->execute();
 	if ($check->fetchColumn() > 0) {
 		echo "Already incremented today. Skipping.\n<br>";
-	//	continue;
+		continue;
 	}
 
 	// Increment investment profit
