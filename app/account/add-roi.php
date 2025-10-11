@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include("../../ops/connect.php");
 $today = date_time();
-echo "\n\n\n<br><br><br>Starting ROI increment process... for [$today]\n<br>";
+echo "\n\n\n<br><br><br>Starting ROI increment process... on $today\n<br>";
 // Get all active investments
 $stmt = $db_conn->prepare("SELECT i.*, p.roi, p.duration, i.duration AS inv_duration FROM investment i JOIN plans p ON i.plan = p.id WHERE i.status = 1");
 $stmt->execute();
@@ -21,11 +21,18 @@ foreach ($investments as $inv) {
 	$start = strtotime($inv['start']);
 	$date_split = explode(" ", $inv['start']);
 	echo "<br> Processing investment ID $inv_id for user $uid: $inv[inv_duration] days remaining. Started on $inv[start]\n<br>";
-	if ($duration > 0 && $date_split[0] != date_time('d')) {
+	if ($duration <= 0 || $inv['inv_duration'] <= 0) {
 		echo "Skipping (not in valid range).\n<br>";
 		continue;
 	}
-
+	if ($date_split[0] == date_time('d')) {
+		echo "Skipping (activated today).\n<br>";
+		continue;
+	}
+	if (time() < $start) {
+		echo "Skipping (not started yet).\n<br>";
+		continue;
+	}
 	echo "Valid for ROI increment.\n<br>";
 	// Calculate daily ROI
 	$total_expected_profit = ($roi / 100.0) * $amount;
@@ -59,5 +66,5 @@ foreach ($investments as $inv) {
 	$log->bindParam(':amt', $daily_roi);
 	$log->execute();
 }
- 
-echo "ROI incremented for active investments.";
+
+echo "<br><br>\n\nROI incremented for active investments.";
