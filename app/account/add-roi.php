@@ -5,7 +5,7 @@ include("../../ops/connect.php");
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 $today = date_time('d')
-echo "\n\n\n<br><br><br>Starting ROI increment process... for \n<br>";
+echo "\n\n\n<br><br><br>Starting ROI increment process... for [$today]\n<br>";
 // Get all active investments
 $stmt = $db_conn->prepare("SELECT i.*, p.roi, p.duration, i.duration AS inv_duration FROM investment i JOIN plans p ON i.plan = p.id WHERE i.status = 1");
 $stmt->execute();
