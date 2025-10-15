@@ -43,7 +43,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`main_id`, `admin_id`, `username`, `email`, `phone`, `actpart`, `password`, `token`) VALUES
-(1, '2347837', 'admin', 'support@wealthchainglobal.com', '+1 ', '0', '$2y$10$uWwKA5DmCZcGYaAakKdJnu0aA489UlP1JuUi8WP4ONHY2egCBD4w.', '2f947c9a422acc02331af2a34e5db4da');
+(1, '2347837', 'admin', 'support@wealthchainsglobal.com', '+1 ', '0', '$2y$10$uWwKA5DmCZcGYaAakKdJnu0aA489UlP1JuUi8WP4ONHY2egCBD4w.', '2f947c9a422acc02331af2a34e5db4da');
 
 -- --------------------------------------------------------
 

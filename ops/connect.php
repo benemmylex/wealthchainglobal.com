@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "u570175213_frontuser";
-$password = "Omo4real@";
-$dbname = "u570175213_front";
+$username = "qfsecure_wealthchainglobal_com";
+$password = "wealthchainglobal.com";
+$dbname = "qfsecure_wealthchainglobal.com";
 
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
@@ -11,9 +11,9 @@ $dbname = "u570175213_front";
 $file = dirname(__FILE__);
 include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/PHPMailer/PHPMailerAutoload.php');
 
-define("SITE_URL", "wealthchainglobal.com");
+define("SITE_URL", "wealthchainsglobal.com");
 
-define("SITE_ADDRESS", "wealthchainglobal.com");
+define("SITE_ADDRESS", "wealthchainsglobal.com");
 
 define("SITE_NAME", "Wealth Chain Global");
 
@@ -60,9 +60,9 @@ $mail->Host = 'smtp.hostinger.com'; // Which SMTP server to use.
 $mail->Port = 587; // Which port to use, 587 is the default port for TLS security.
 $mail->SMTPSecure = 'tsl'; // Which security method to use. TLS is most secure.
 $mail->SMTPAuth = true; // Whether you need to login. This is almost always required.
-$mail->Username = "support@wealthchainglobal.com"; //. SITE_ADDRESS; // Your Gmail address.
+$mail->Username = "support@wealthchainsglobal.com"; //. SITE_ADDRESS; // Your Gmail address.
 $mail->Password = "Omo4real@"; // Your Gmail login password or App Specific Password.
-$mail->setFrom("support@wealthchainglobal.com"); //. SITE_ADDRESS);
+$mail->setFrom("support@wealthchainsglobal.com"); //. SITE_ADDRESS);
 $mail->CharSet = "UTF-8";
 $mail->Encoding = "base64";
 $message = '';
@@ -79,9 +79,9 @@ $mail2->Host = 'smtp.hostinger.com'; // Which SMTP server to use.
 $mail2->Port = 587; // Which port to use, 587 is the default port for TLS security.
 $mail2->SMTPSecure = 'tls'; // Which security method to use. TLS is most secure.
 $mail2->SMTPAuth = true; // Whether you need to login. This is almost always required.
-$mail2->Username = "support@wealthchainglobal.com"; // . SITE_ADDRESS; // Your Gmail address.
+$mail2->Username = "support@wealthchainsglobal.com"; // . SITE_ADDRESS; // Your Gmail address.
 $mail2->Password = "Omo4real@"; // Your Gmail login password or App Specific Password.
-$mail2->setFrom('support@wealthchainglobal.com');
+$mail2->setFrom('support@wealthchainsglobal.com');
 $mail2->CharSet = "UTF-8";
 $mail2->Encoding = "base64";
 $message2 = '';

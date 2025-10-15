@@ -1,1 +1,1 @@
-# wealthchainglobal.com
+# wealthchainsglobal.com
