@@ -106,6 +106,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$message2 .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
 	$mail2->Body = $message2;
 	// send admin email
+	echo "Preparing to send admin email...\n";
+	echo "Admin email address: " . SITE_ADMIN_EMAIL . "\n";
 	if (!$mail2->send()) {
 		error_log("Admin mail error: " . $mail2->ErrorInfo);
 		echo "Mailer Error: " . $mail2->ErrorInfo;
