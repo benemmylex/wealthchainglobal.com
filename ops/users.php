@@ -1002,6 +1002,30 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     $mail2->Body = $message2; // Set a plain text body.
                     $mail2->send();
 
+                    //===================================== Receipt Mail to Depositor ====================================//
+
+                    $mail->addAddress($email, $fullname); // Set the recipient (depositor).
+                    $mail->Subject = 'Deposit Request Received - ' . $transc_id;
+                    $mail->isHTML(true);
+                    $message = ''; // reset message for depositor
+                    $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Deposit Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . $fullname . ', </h1>';
+                    $message .= '<p>We have received your deposit request. Details are below:</p>';
+                    $message .= '<div class="table-responsive"><table class="table table-striped table-hover">';
+                    $message .= "<tr><td><strong>Transaction Id:</strong> </td><td>" . strip_tags($transc_id) . "</td></tr>";
+                    $message .= "<tr><td><strong>Amount:</strong> </td><td>" . $_SESSION['symbol'] . number_format($amount, 2) . "</td></tr>";
+                    $message .= "<tr><td><strong>Type:</strong> </td><td>" . strip_tags($type) . "</td></tr>";
+                    $message .= "<tr><td><strong>Account:</strong> </td><td>" . strip_tags($accts) . "</td></tr>";
+                    $message .= "</table></div>";
+                    $message .= '<p>Please complete the payment and upload the proof if you have not done so. Your account will be credited once payment is confirmed.</p>';
+                    $message .= '<p>If you did not initiate this request, please contact our support immediately.</p>';
+                    $message .= "<p>Kind regards,</p>";
+                    $message .= "<p><b>" . SITE_NAME . " Support</b></p><br>";
+                    $message .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
+                    $mail->Body = $message;
+                    $mail->send();
+
                 } else {
                     echo json_encode([
                         'status' => 'error',
@@ -1095,6 +1119,33 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     $message2 .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
                     $mail2->Body = $message2; // Set a plain text body.
                     $mail2->send();
+
+                    //===================================== Receipt Mail to Depositor ====================================//
+
+                    // prepare depositor message
+                    $mail->clearAddresses();
+                    $mail->addAddress($email, $fullname); // depositor
+                    $mail->Subject = 'Deposit Proof Received - ' . $transc_id;
+                    $mail->isHTML(true);
+                    $message = ''; // reset message for depositor
+                    $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Deposit Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . $fullname . ', </h1>';
+                    $message .= '<p>We have received your payment proof. Details are below:</p>';
+                    $message .= '<div class="table-responsive"><table class="table table-striped table-hover">';
+                    $message .= "<tr><td><strong>Transaction Id:</strong> </td><td>" . strip_tags($transc_id) . "</td></tr>";
+                    $message .= "<tr><td><strong>Amount:</strong> </td><td>" . $_SESSION['symbol'] . number_format($amount, 2) . "</td></tr>";
+                    $message .= "<tr><td><strong>Type:</strong> </td><td>" . strip_tags($type) . "</td></tr>";
+                    $message .= "<tr><td><strong>Account:</strong> </td><td>" . strip_tags($accts) . "</td></tr>";
+                    $message .= "<tr><td><strong>Status:</strong> </td><td>Pending confirmation</td></tr>";
+                    $message .= "</table></div>";
+                    $message .= '<p>Please complete the payment if you have not done so. Your account will be credited once payment is confirmed by our team.</p>';
+                    $message .= '<p>If you did not initiate this request, please contact our support immediately.</p>';
+                    $message .= "<p>Kind regards,</p>";
+                    $message .= "<p><b>" . SITE_NAME . " Support</b></p><br>";
+                    $message .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
+                    $mail->Body = $message;
+                    $mail->send();
 
                     echo json_encode([
                         'status' => 'success',
@@ -1204,13 +1255,16 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         $insert->bindParam(":account", $accts, PDO::PARAM_STR);
                         $insert->execute();
 
+                        // Notify admin
+                        $mail->clearAddresses();
                         $mail->addAddress(SITE_ADMIN_EMAIL, SITE_NAME); // Set the recipient of the message.
                         $mail->Subject = 'Withdrawal Request '; // The subject of the message.
                         $mail->isHTML(true);
+                        $message = '';
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
                         $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Withdrawal Approved" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hello Admin, </h1>';
-                        $message .= '<p>A withdrawal request of ' . $_SESSION['symbol'] . number_format($amount, 2) . ' has just been placed by ' . $username . '</p><br><p> Click the button below to login to your account an view details.</p><br>';
+                        $message .= '<p>A withdrawal request of ' . $_SESSION['symbol'] . number_format($amount, 2) . ' has just been placed by ' . ($_SESSION['username'] ?? $mem_id) . '</p><br><p> Click the button below to login to your account and view details.</p><br>';
                         $message .= '<center><a href="https://www.' . SITE_ADDRESS . 'adminsignin" style="background-color: #cdcdcd; border-radius: 5px; padding: 12px 12px; text-decoration: none;">View</a></center><br>';
                         $message .= "<p>Kind regards,</p>";
                         $message .= "<p><b>" . SITE_NAME . ".</b></p><br>";
@@ -1218,6 +1272,37 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
 
                         $mail->Body = $message; // Set a plain text body.
                         $mail->send();
+
+                        // Notify user
+                        $fullname = $_SESSION['fullname'] ?? '';
+                        $email = $_SESSION['email'] ?? '';
+                        $username = $_SESSION['username'] ?? '';
+
+                        if (!empty($email)) {
+                            $mail->clearAddresses();
+                            $mail->addAddress($email, $fullname); // depositor
+                            $mail->Subject = 'Withdrawal Request Received - ' . $transc_id;
+                            $mail->isHTML(true);
+                            $message = ''; // reset message for user
+                            $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
+                            $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Withdrawal Request Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                            $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . htmlspecialchars($fullname) . ', </h1>';
+                            $message .= '<p>We have received your withdrawal request. Details are below:</p>';
+                            $message .= '<div class="table-responsive"><table class="table table-striped table-hover">';
+                            $message .= "<tr><td><strong>Transaction Id:</strong> </td><td>" . strip_tags($transc_id) . "</td></tr>";
+                            $message .= "<tr><td><strong>Amount:</strong> </td><td>" . $_SESSION['symbol'] . number_format($amount, 2) . "</td></tr>";
+                            $message .= "<tr><td><strong>Account:</strong> </td><td>" . strip_tags($acct) . "</td></tr>";
+                            $message .= "<tr><td><strong>Wallet Address:</strong> </td><td>" . strip_tags($wallet) . "</td></tr>";
+                            $message .= "<tr><td><strong>Status:</strong> </td><td>Pending</td></tr>";
+                            $message .= "</table></div>";
+                            $message .= '<p>We will process this request and notify you once it has been completed. If you did not initiate this request, contact support immediately.</p>';
+                            $message .= "<p>Kind regards,</p>";
+                            $message .= "<p><b>" . SITE_NAME . " Support</b></p><br>";
+                            $message .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
+
+                            $mail->Body = $message;
+                            $mail->send();
+                        }
                     } else {
                         echo json_encode([
                             'status' => 'error',

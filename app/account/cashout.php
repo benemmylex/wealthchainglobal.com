@@ -36,6 +36,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['investment_id'])) {
 	$close->execute();
 
 	$_SESSION['success'] = "Cashout successful. Amount credited: " . number_format($total, 2);
+	// Send notification email to user
+	$mail->clearAllRecipients();
+	$mail->setFrom(SITE_EMAIL, SITE_NAME);
+	$mail->addAddress($_SESSION['mem_email'], $_SESSION['mem_fname'] . ' ' . $_SESSION['mem_lname']);
+	$mail->Subject = "Investment Cashout Successful";
+	$message_user = "<p>Dear " . htmlspecialchars($_SESSION['mem_fname']) . ",</p>";
+	$message_user .= "<p>Your cashout request for investment ID #" . $investment_id . " has been processed successfully.</p>";
+	$message_user .= "<p>Amount credited to your balance: <strong>" . number_format($total, 2) . "</strong></p>";
+	$message_user .= "<p>Thank you for investing with " . SITE_NAME . ".</p>";
+	$message_user .= "<p>Best regards,<br>" . SITE_NAME . " Team</p>";
+	$mail->Body = $message_user;
+	if (!$mail->send()) {
+		error_log("User mail error: " . $mail->ErrorInfo);
+	} else {
+		// user mail sent
+	}
 	header("Location: my-investments");
 	exit();
 }

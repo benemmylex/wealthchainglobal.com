@@ -23,6 +23,29 @@ foreach ($investments as $inv) {
 	echo "<br> Processing investment ID $inv_id for user $uid: $inv[inv_duration] days remaining. Started on $inv[start]\n<br>";
 	if ($duration <= 0 || $inv['inv_duration'] <= 0) {
 		echo "Skipping (not in valid range).\n<br>";
+		// Send completion email to user
+		$mem_stmt = $db_conn->prepare("SELECT mem_email, mem_fname, mem_lname FROM members WHERE id = :uid");
+		$mem_stmt->bindParam(':uid', $uid, PDO::PARAM_INT);
+		$mem_stmt->execute();
+		$mem = $mem_stmt->fetch(PDO::FETCH_ASSOC);
+		if ($mem) {
+			$mail->clearAllRecipients();
+			$mail->setFrom(SITE_EMAIL, SITE_NAME);
+			$mail->addAddress($mem['mem_email'], $mem['mem_fname'] . ' ' . $mem['mem_lname']);
+			$mail->Subject = "Investment Plan Completed";
+			$message_user = "<p>Dear " . htmlspecialchars($mem['mem_fname']) . ",</p>";
+			$message_user .= "<p>Your investment ID #" . $inv_id . " has completed its plan duration.</p>";
+			$message_user .= "<p>Total Profit Earned: <strong>" . number_format($profit, 2) . "</strong></p>";
+			$message_user .= "<p>You can choose to activate a new plan or cash out your investment.</p>";
+			$message_user .= "<p>Thank you for investing with " . SITE_NAME . ".</p>";
+			$message_user .= "<p>Best regards,<br>" . SITE_NAME . " Team</p>";
+			$mail->Body = $message_user;
+			if (!$mail->send()) {
+				error_log("User mail error: " . $mail->ErrorInfo);
+			} else {
+				// user mail sent
+			}
+		}
 		continue;
 	}
 	if ($date_split[0] == date_time('d')) {
