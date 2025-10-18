@@ -108,6 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	// send admin email
 	if (!$mail2->send()) {
 		error_log("Admin mail error: " . $mail2->ErrorInfo);
+		echo "Mailer Error: " . $mail2->ErrorInfo;
 	} else {
 		// admin mail sent
 	}
@@ -136,6 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$mail->Body = $message_user;
 	if (!$mail->send()) {
 		error_log("User mail error: " . $mail->ErrorInfo);
+		echo "Mailer Error: " . $mail->ErrorInfo;
 	} else {
 		// user mail sent
 	}
@@ -147,5 +149,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 }
 
 // If not POST or missing plan_id
-header("Location: investments");
-exit();
+/* header("Location: investments");
+exit(); */
