@@ -143,8 +143,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	}
 
 	// Redirect back to investments page
-	header("Location: investments.php");
-	exit();
+	/* header("Location: investments.php");
+	exit(); */
 
 }
 
