@@ -113,15 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	}
 
 	//===================================== User Mail ====================================================//
-	// Clear recipients and reuse $mail2 (keeps same SMTP/config)
-	$mail2->clearAllRecipients();
-	$mail2->clearCC();
-	$mail2->clearBCC();
-	$mail2->clearReplyTos();
-
-	$mail2->addAddress($email, $fullname);
-	$mail2->Subject = 'Your Investment Plan Activated';
-	$mail2->isHTML(true);
+	$mail->addAddress($email, $fullname);
+	$mail->Subject = 'Your Investment Plan Activated';
+	$mail->isHTML(true);
 
 	$message_user = '';
 	$message_user .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
@@ -139,9 +133,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$message_user .= "<p><b>" . SITE_NAME . "</b></p><br>";
 	$message_user .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
 
-	$mail2->Body = $message_user;
-	if (!$mail2->send()) {
-		error_log("User mail error: " . $mail2->ErrorInfo);
+	$mail->Body = $message_user;
+	if (!$mail->send()) {
+		error_log("User mail error: " . $mail->ErrorInfo);
 	} else {
 		// user mail sent
 	}
