@@ -33,6 +33,7 @@ foreach ($investments as $inv) {
 			$mail->setFrom(SITE_EMAIL, SITE_NAME);
 			$mail->addAddress($mem['mem_email'], $mem['mem_fname'] . ' ' . $mem['mem_lname']);
 			$mail->Subject = "Investment Plan Completed";
+			$mail->isHTML(true);
 			$message_user = "<p>Dear " . htmlspecialchars($mem['mem_fname']) . ",</p>";
 			$message_user .= "<p>Your investment ID #" . $inv_id . " has completed its plan duration.</p>";
 			$message_user .= "<p>Total Profit Earned: <strong>" . number_format($profit, 2) . "</strong></p>";

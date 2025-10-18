@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['investment_id'])) {
 	$email = $_SESSION['email'];
 	$mem_id = $_SESSION['mem_id'];
 	$mail->addAddress($email, $fullname);
+	$mail->isHTML(true);
 	$mail->Subject = "Investment Cashout Successful";
 	$message_user = "<p>Dear " . htmlspecialchars($fullname) . ",</p>";
 	$message_user .= "<p>Your cashout request for investment ID #" . $investment_id . " has been processed successfully.</p>";
