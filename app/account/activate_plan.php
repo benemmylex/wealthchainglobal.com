@@ -81,8 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$email = $_SESSION['email'];
 	$mem_id = $_SESSION['mem_id'];
 
-	//===================================== Second Mail====================================================//
-
+	//===================================== Second Mail (Admin) ====================================================//
+	$message2 = '';
 	$mail2->addAddress(SITE_ADMIN_EMAIL, "New Plan Activated"); // Set the recipient of the message.
 	$mail2->Subject = 'New Plan Activated!! ' . $fullname; // The subject of the message.
 	$mail2->isHTML(true);
@@ -101,12 +101,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$message2 .= "<p>Kind regards,</p>";
 	$message2 .= "<p><b>" . SITE_NAME . ".</b></p><br>";
 	$message2 .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
-	$mail2->Body = $message2; // Set a plain text body.
-	$mail2->send();
+	$mail2->Body = $message2;
+	// send admin email
+	if (!$mail2->send()) {
+		error_log("Admin mail error: " . $mail2->ErrorInfo);
+	} else {
+		// admin mail sent
+	}
 
+	//===================================== User Mail ====================================================//
+	// Clear recipients and reuse $mail2 (keeps same SMTP/config)
+	$mail2->clearAllRecipients();
+	$mail2->clearCC();
+	$mail2->clearBCC();
+	$mail2->clearReplyTos();
 
+	$mail2->addAddress($email, $fullname);
+	$mail2->Subject = 'Your Investment Plan Activated';
+	$mail2->isHTML(true);
+
+	$message_user = '';
+	$message_user .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
+	$message_user .= '<div style="padding: 10px 20px;" align="left"><h4 class="title-head hidden-xs">Investment Plan Activated</h4><br>';
+	$message_user .= '<div class="table-responsive"><table class="table table-striped table-hover">';
+	$message_user .= "<tr><td><strong>Name:</strong> </td><td>" . $fullname . "</td></tr>";
+	$message_user .= "<tr><td><strong>Plan:</strong> </td><td>" . strip_tags($plan['name']) . "</td></tr>";
+	$message_user .= "<tr><td><strong>Amount:</strong> </td><td>" . strip_tags($amount) . "</td></tr>";
+	$message_user .= "<tr><td><strong>Type:</strong> </td><td>" . strip_tags($type) . "</td></tr>";
+	$message_user .= "<tr><td><strong>Start Date:</strong> </td><td>" . htmlspecialchars($now) . "</td></tr>";
+	$message_user .= "<tr><td><strong>End Date:</strong> </td><td>" . htmlspecialchars($end) . "</td></tr>";
+	$message_user .= "</table></div>";
+	$message_user .= '<p>Your investment has been successfully activated. You can view details in your account dashboard.</p>';
+	$message_user .= "<p>Kind regards,</p>";
+	$message_user .= "<p><b>" . SITE_NAME . "</b></p><br>";
+	$message_user .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
+
+	$mail2->Body = $message_user;
+	if (!$mail2->send()) {
+		error_log("User mail error: " . $mail2->ErrorInfo);
+	} else {
+		// user mail sent
+	}
+
+	// Redirect back to investments page
 	header("Location: investments.php");
 	exit();
+
 }
 
 // If not POST or missing plan_id
