@@ -1,8 +1,8 @@
 <?php
 include("../../ops/connect.php");
- ini_set('display_errors', 1);
- ini_set('display_startup_errors', 1);
- error_reporting(E_ALL);
+ //ini_set('display_errors', 1);
+ //ini_set('display_startup_errors', 1);
+ //error_reporting(E_ALL);
 
 // Check if user is logged in
 if (!isset($_SESSION['mem_id'])) {
@@ -106,11 +106,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$message2 .= "<p style='text-align: center;'>&copy;" . date('Y') . " " . SITE_NAME . " All Rights Reserved</p></div></div>";
 	$mail2->Body = $message2;
 	// send admin email
-	echo "Preparing to send admin email...\n";
-	echo "Admin email address: " . SITE_ADMIN_EMAIL . "\n";
 	if (!$mail2->send()) {
 		error_log("Admin mail error: " . $mail2->ErrorInfo);
-		echo "Mailer Error: " . $mail2->ErrorInfo;
 	} else {
 		// admin mail sent
 	}
@@ -139,17 +136,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plan_id'])) {
 	$mail->Body = $message_user;
 	if (!$mail->send()) {
 		error_log("User mail error: " . $mail->ErrorInfo);
-		echo "Mailer Error: " . $mail->ErrorInfo;
 	} else {
 		// user mail sent
 	}
 
 	// Redirect back to investments page
-	/* header("Location: investments.php");
-	exit(); */
+	header("Location: investments.php");
+	exit();
 
 }
 
 // If not POST or missing plan_id
-/* header("Location: investments");
-exit(); */
+header("Location: investments");
+exit();
