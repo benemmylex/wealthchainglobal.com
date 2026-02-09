@@ -92,6 +92,17 @@
   <a href="#" class="scrollToTop scrollToTop--style1"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
   <!-- ===============>> scrollToTop ending here <<================= -->
 
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/447344572400" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.86 11.86 0 0012 .5C6.26.5 1.5 5.26 1.5 11c0 1.95.51 3.86 1.48 5.55L.5 23.5l6.2-2.05A11.5 11.5 0 0012 22c5.74 0 10.5-4.76 10.5-10.5 0-3.02-1.18-5.83-3.98-8.02zM12 20.5c-1.04 0-2.06-.18-3.01-.52l-.22-.08-3.69 1.22 1.25-3.59-.07-.23A8.99 8.99 0 013 11c0-4.97 4.03-9 9-9s9 4.03 9 9S16.97 20.5 12 20.5z"/><path d="M17.16 14.24c-.24-.12-1.41-.69-1.63-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62 2.41 1.04 2.41.69 2.85.66.44-.03 1.41-.56 1.61-1.10.2-.54.2-1 .14-1.1-.06-.1-.22-.16-.46-.28z" fill="#fff"/></svg>
+</a>
+
+<style>
+.whatsapp-float{position:fixed;width:56px;height:56px;bottom:22px;right:22px;background:#25D366;color:#fff;border-radius:50%;box-shadow:0 6px 18px rgba(37,211,102,0.25);display:flex;align-items:center;justify-content:center;z-index:99999;transition:transform .15s ease}
+.whatsapp-float:hover{transform:translateY(-4px)}
+.whatsapp-float svg{width:26px;height:26px;display:block}
+</style>
+
 <div class="gtranslate_wrapper"></div>
   <!-- vendor plugins -->
   <script src="assets/js/jquery-3.4.1.min.js"></script>
