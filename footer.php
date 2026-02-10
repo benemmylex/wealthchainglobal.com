@@ -98,7 +98,7 @@
 </a>
 
 <style>
-.whatsapp-float{position:fixed;width:56px;height:56px;bottom:22px;right:22px;background:#25D366;color:#fff;border-radius:50%;box-shadow:0 6px 18px rgba(37,211,102,0.25);display:flex;align-items:center;justify-content:center;z-index:99999;transition:transform .15s ease}
+.whatsapp-float{position:fixed;width:56px;height:56px;bottom:120px;right:22px;background:#25D366;color:#fff;border-radius:50%;box-shadow:0 6px 18px rgba(37,211,102,0.25);display:flex;align-items:center;justify-content:center;z-index:99999;transition:transform .15s ease}
 .whatsapp-float:hover{transform:translateY(-4px)}
 .whatsapp-float svg{width:26px;height:26px;display:block}
 </style>
