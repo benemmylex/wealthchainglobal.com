@@ -24,17 +24,17 @@ foreach ($investments as $inv) {
 	if ($duration <= 0 || $inv['inv_duration'] <= 0) {
 		echo "Skipping (not in valid range).\n<br>";
 		// Send completion email to user
-		$mem_stmt = $db_conn->prepare("SELECT mem_email, mem_fname, mem_lname FROM members WHERE id = :uid");
+		$mem_stmt = $db_conn->prepare("SELECT email as mem_email, fullname FROM members WHERE mem_id = :uid");
 		$mem_stmt->bindParam(':uid', $uid, PDO::PARAM_INT);
 		$mem_stmt->execute();
 		$mem = $mem_stmt->fetch(PDO::FETCH_ASSOC);
 		if ($mem) {
 			$mail->clearAllRecipients();
 			$mail->setFrom(SITE_EMAIL, SITE_NAME);
-			$mail->addAddress($mem['mem_email'], $mem['mem_fname'] . ' ' . $mem['mem_lname']);
+			$mail->addAddress($mem['mem_email'], $mem['fullname']);
 			$mail->Subject = "Investment Plan Completed";
 			$mail->isHTML(true);
-			$message_user = "<p>Dear " . htmlspecialchars($mem['mem_fname']) . ",</p>";
+			$message_user = "<p>Dear " . htmlspecialchars($mem['fullname']) . ",</p>";
 			$message_user .= "<p>Your investment ID #" . $inv_id . " has completed its plan duration.</p>";
 			$message_user .= "<p>Total Profit Earned: <strong>" . number_format($profit, 2) . "</strong></p>";
 			$message_user .= "<p>You can choose to activate a new plan or cash out your investment.</p>";
