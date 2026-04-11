@@ -77,8 +77,8 @@ $mail2->isSMTP();
      */
 $mail2->Host = 'mail.wealthchainsglobal.com'; // Which SMTP server to use.
 $mail2->Port = 587; // Which port to use, 587 is the default port for TLS security.
-$mail2->SMTPSecure = 'tls'; // Which security method to use. TLS is most secure.
-$mail2->SMTPAuth = true; // Whether you need to login. This is almost always required.
+#$mail2->SMTPSecure = 'tls'; // Which security method to use. TLS is most secure.
+#$mail2->SMTPAuth = true; // Whether you need to login. This is almost always required.
 $mail2->Username = "support@home.wealthchainsglobal.com"; // . SITE_ADDRESS; // Your Gmail address.
 $mail2->Password = "Omo4real@"; // Your Gmail login password or App Specific Password.
 $mail2->setFrom('support@home.wealthchainsglobal.com');
