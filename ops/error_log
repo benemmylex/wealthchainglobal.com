@@ -1,0 +1,5 @@
+[06-Feb-2026 09:04:29 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php74/sess_598b92a8757e3c25762b8b9441cdf2e5, O_RDWR) failed: No such file or directory (2) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[06-Feb-2026 09:04:29 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php74) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[06-Feb-2026 09:08:04 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php74/sess_598b92a8757e3c25762b8b9441cdf2e5, O_RDWR) failed: No such file or directory (2) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[06-Feb-2026 09:08:04 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php74) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[14-Feb-2026 01:51:20 America/New_York] PHP Warning:  unlink(): No such file or directory in /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php on line 1072

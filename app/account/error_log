@@ -1,0 +1,155 @@
+[06-Feb-2026 09:04:32 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php74/sess_598b92a8757e3c25762b8b9441cdf2e5, O_RDWR) failed: No such file or directory (2) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[06-Feb-2026 09:04:32 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php74) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[06-Feb-2026 09:08:08 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php74/sess_598b92a8757e3c25762b8b9441cdf2e5, O_RDWR) failed: No such file or directory (2) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[06-Feb-2026 09:08:08 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php74) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[10-Feb-2026 13:14:24 America/New_York] Admin mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[10-Feb-2026 13:14:24 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[11-Feb-2026 09:44:18 America/New_York] Admin mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[11-Feb-2026 09:44:18 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[13-Feb-2026 12:36:03 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mem_email' in 'SELECT' in /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php:29
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(29): PDOStatement->execute()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php on line 29
+[13-Feb-2026 12:37:04 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mem_fname' in 'SELECT' in /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php:29
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(29): PDOStatement->execute()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php on line 29
+[13-Feb-2026 12:42:10 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'WHERE' in /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php:29
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(29): PDOStatement->execute()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php on line 29
+[13-Feb-2026 12:43:45 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[13-Feb-2026 12:43:45 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[14-Feb-2026 01:53:49 America/New_York] Admin mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[14-Feb-2026 01:53:49 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[15-Feb-2026 18:00:04 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[15-Feb-2026 18:00:04 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[15-Feb-2026 18:27:45 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[15-Feb-2026 18:28:16 America/New_York] Admin mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[15-Feb-2026 18:28:16 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[16-Feb-2026 18:00:30 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[16-Feb-2026 18:00:30 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[17-Feb-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[17-Feb-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[18-Feb-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[18-Feb-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[19-Feb-2026 18:00:46 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[19-Feb-2026 18:00:46 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[20-Feb-2026 18:00:30 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[20-Feb-2026 18:00:30 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[21-Feb-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[21-Feb-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[22-Feb-2026 18:00:30 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[22-Feb-2026 18:00:30 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[23-Feb-2026 18:00:32 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[23-Feb-2026 18:00:32 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[23-Feb-2026 18:00:32 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[24-Feb-2026 18:00:34 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[24-Feb-2026 18:00:34 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[24-Feb-2026 18:00:34 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[25-Feb-2026 18:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[25-Feb-2026 18:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[25-Feb-2026 18:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[26-Feb-2026 18:00:52 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[26-Feb-2026 18:00:53 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[26-Feb-2026 18:00:53 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[27-Feb-2026 23:00:12 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[27-Feb-2026 18:00:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(6): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[27-Feb-2026 20:45:54 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[28-Feb-2026 18:00:06 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[28-Feb-2026 18:00:06 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[01-Mar-2026 18:00:59 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[01-Mar-2026 18:00:59 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[02-Mar-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[02-Mar-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[03-Mar-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[03-Mar-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[04-Mar-2026 18:00:40 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[04-Mar-2026 18:00:40 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[05-Mar-2026 18:01:00 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[05-Mar-2026 18:01:00 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[06-Mar-2026 18:00:06 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[06-Mar-2026 18:00:06 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[07-Mar-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[07-Mar-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[08-Mar-2026 19:00:54 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[08-Mar-2026 19:00:54 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[09-Mar-2026 19:00:34 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[09-Mar-2026 19:00:34 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[10-Mar-2026 19:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[10-Mar-2026 19:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[11-Mar-2026 19:00:40 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[11-Mar-2026 19:00:40 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[12-Mar-2026 19:00:15 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[12-Mar-2026 19:00:15 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[13-Mar-2026 19:00:46 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[13-Mar-2026 19:00:46 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[14-Mar-2026 19:00:31 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[14-Mar-2026 19:00:31 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[15-Mar-2026 19:00:35 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[15-Mar-2026 19:00:35 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[16-Mar-2026 19:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[16-Mar-2026 19:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[17-Mar-2026 19:00:43 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[17-Mar-2026 19:00:43 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[18-Mar-2026 19:00:52 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[18-Mar-2026 19:00:52 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[18-Mar-2026 19:00:52 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[19-Mar-2026 19:00:13 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[19-Mar-2026 19:00:13 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[19-Mar-2026 19:00:13 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[20-Mar-2026 19:00:59 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[20-Mar-2026 19:00:59 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[20-Mar-2026 19:00:59 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[21-Mar-2026 19:00:08 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[21-Mar-2026 19:00:08 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[21-Mar-2026 19:00:08 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[22-Mar-2026 19:00:55 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[22-Mar-2026 19:00:55 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[22-Mar-2026 19:00:55 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[23-Mar-2026 19:00:36 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[23-Mar-2026 19:00:36 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[23-Mar-2026 19:00:36 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[24-Mar-2026 19:00:44 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[24-Mar-2026 19:00:44 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[24-Mar-2026 19:00:44 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[25-Mar-2026 19:01:01 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[25-Mar-2026 19:01:01 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[25-Mar-2026 19:01:01 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[26-Mar-2026 19:00:12 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[26-Mar-2026 19:00:12 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[26-Mar-2026 19:00:12 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[27-Mar-2026 08:40:11 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[27-Mar-2026 23:00:33 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[27-Mar-2026 19:00:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(6): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[28-Mar-2026 19:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[28-Mar-2026 19:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[29-Mar-2026 18:00:35 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[29-Mar-2026 18:00:35 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[30-Mar-2026 18:00:46 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[30-Mar-2026 18:00:46 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[31-Mar-2026 18:00:53 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[31-Mar-2026 18:00:53 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[01-Apr-2026 18:01:06 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[01-Apr-2026 18:01:06 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[02-Apr-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[02-Apr-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[03-Apr-2026 18:00:58 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[04-Apr-2026 18:00:51 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[05-Apr-2026 18:00:42 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[06-Apr-2026 18:00:49 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[07-Apr-2026 18:00:40 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[08-Apr-2026 18:00:07 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[09-Apr-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[10-Apr-2026 18:01:34 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
