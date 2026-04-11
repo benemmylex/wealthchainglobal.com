@@ -11,7 +11,7 @@ try {
             $('#main-navbar').addClass("navbar-dark bg-dark");
         }else{
             $("body").attr("data-mdb-theme", "light");
-            $('.logd').attr('src', '../assets/images/logo-dark.png');
+            $('.logd').attr('src', '../assets/images/logo/logo-dark.png');
             $('.bl').hide();
             $('.bd').show();
             $('#main-navbar').removeClass("navbar-dark bg-dark");
@@ -35,7 +35,7 @@ try {
                 $('.bd').show();
                 $('#main-navbar').removeClass("navbar-dark bg-dark");
                 $('#main-navbar').addClass("navbar-light bg-light");
-                $(".logd").attr('src', '../assets/images/logo-dark.png');
+                $(".logd").attr('src', '../assets/images/logo/logo-dark.png');
             }
         }else{
             let GetTheme = localStorage.getItem("theme");
@@ -52,7 +52,7 @@ try {
                 $('.bd').show();
                 $('#main-navbar').removeClass("navbar-dark bg-dark");
                 $('#main-navbar').addClass("navbar-light bg-light");
-                $(".logd").attr('src', '../assets/images/logo-dark.png');
+                $(".logd").attr('src', '../assets/images/logo/logo-dark.png');
             }
         }
     }

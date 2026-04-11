@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                                         $mail->Subject = 'New Account Created'; // The subject of the message.
                                         $mail->isHTML(true);
                                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Welcome ' . $fullname . ', </h1>';
                                         $message .= '<p>Thank you for registering on ' . SITE_NAME . '.</p>';
                                         $message .= '<p>We are thrilled to have you. We hope you have the best trading of experience with us.</p>';
@@ -254,7 +254,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                                     $mail->Subject = 'New Account Created'; // The subject of the message.
                                     $mail->isHTML(true);
                                     $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                                     $message .= '<div style="padding: 10px 20px;" align="left"><h1>Welcome ' . $fullname . ', </h1>';
                                     $message .= '<p>Thank you for registering on ' . SITE_NAME . '.</p>';
                                     $message .= '<p>We are thrilled to have you. We hope you have the best trading of experience with us.</p>';
@@ -372,7 +372,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                                 $mail->Subject = 'New Account Created'; // The subject of the message.
                                 $mail->isHTML(true);
                                 $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                                $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                                $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                                 $message .= '<div style="padding: 10px 20px;" align="left"><h1>Welcome ' . $fullname . ', </h1>';
                                 $message .= '<p>Thank you for registering on ' . SITE_NAME . '.</p>';
                                 $message .= '<p>We are thrilled to have you. We hope you have the best trading of experience with us.</p>';
@@ -623,7 +623,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     //$mail->SMTPDebug = 1;
 
                     $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Password Reset link" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Password Reset link" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                     $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . $row['fullname'] . ', </h1>';
                     $message .= '<p> Please click the link below to reset password.</p><br>';
                     $message .= '<center><a href="https://www.' . SITE_ADDRESS . '/resetpassword?mem_id=' . $row['mem_id'] . '&token=' . $row['token'] . '" style="background-color: #cdcdcd; border-radius: 5px; padding: 12px 12px; text-decoration: none;">Reset Password</a></center><br>';
@@ -763,7 +763,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         //$mail->SMTPDebug = 1;
 
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi Admin, </h1>';
                         $message .= '<p>A new ' . $tradetype . ' order has just been placed</p>';
                         $message .= '<p>Order Amount: $' . number_format($amount, 2) . '</p>';
@@ -900,7 +900,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         //$mail->SMTPDebug = 1;
 
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi Admin, </h1>';
                         $message .= '<p>A new ' . $tradetype . ' order has just been placed</p>';
                         $message .= '<p>Order Amount: $' . number_format($amount, 2) . '</p>';
@@ -1009,7 +1009,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     $mail->isHTML(true);
                     $message = ''; // reset message for depositor
                     $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Deposit Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png assets/images/logo/logo-dark.png" alt="Deposit Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                     $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . $fullname . ', </h1>';
                     $message .= '<p>We have received your deposit request. Details are below:</p>';
                     $message .= '<div class="table-responsive"><table class="table table-striped table-hover">';
@@ -1129,7 +1129,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     $mail->isHTML(true);
                     $message = ''; // reset message for depositor
                     $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Deposit Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Deposit Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                     $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . $fullname . ', </h1>';
                     $message .= '<p>We have received your payment proof. Details are below:</p>';
                     $message .= '<div class="table-responsive"><table class="table table-striped table-hover">';
@@ -1262,7 +1262,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         $mail->isHTML(true);
                         $message = '';
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Withdrawal Approved" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Withdrawal Approved" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hello Admin, </h1>';
                         $message .= '<p>A withdrawal request of ' . $_SESSION['symbol'] . number_format($amount, 2) . ' has just been placed by ' . ($_SESSION['username'] ?? $mem_id) . '</p><br><p> Click the button below to login to your account and view details.</p><br>';
                         $message .= '<center><a href="https://www.' . SITE_ADDRESS . 'adminsignin" style="background-color: #cdcdcd; border-radius: 5px; padding: 12px 12px; text-decoration: none;">View</a></center><br>';
@@ -1285,7 +1285,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                             $mail->isHTML(true);
                             $message = ''; // reset message for user
                             $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                            $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Withdrawal Request Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                            $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Withdrawal Request Received" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                             $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . htmlspecialchars($fullname) . ', </h1>';
                             $message .= '<p>We have received your withdrawal request. Details are below:</p>';
                             $message .= '<div class="table-responsive"><table class="table table-striped table-hover">';
@@ -1596,7 +1596,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         //$mail->SMTPDebug = 1;
 
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi Admin, </h1>';
                         $message .= '<p>A new ' . $tradetype . ' order has just been placed</p>';
                         $message .= '<p>Order Amount: $' . number_format($amount, 2) . '</p>';
@@ -1735,7 +1735,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         //$mail->SMTPDebug = 1;
 
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New Trade Added" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi Admin, </h1>';
                         $message .= '<p>A new ' . $tradetype . ' order has just been placed</p>';
                         $message .= '<p>Order Amount: $' . number_format($amount, 2) . '</p>';
@@ -2173,7 +2173,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     //$mail->SMTPDebug = 1;
 
                     $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Password Reset Successful" width="60" style="width: 100px !important; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Password Reset Successful" width="60" style="width: 100px !important; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                     $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hi ' . $e_user . ', </h1>';
                     $message .= '<div class="table-responsive"><table class="table table-striped table-hover">';
                     $message .= '<p> Your password has been reset successfully.</p><br>';
@@ -2233,7 +2233,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     //$mail->SMTPDebug = 1;
                     $mail->isHTML(true);
                     $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Copy Trader Request" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Copy Trader Request" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                     $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hello Admin, </h1>';
                     $message .= '<p>' . $_SESSION['username'] . ' has requested to copy trades from ' . $row2['t_name'] . '</p>';
                     $message .= '<p>Please login to your admin dashboard to approve this request.</p>';
@@ -2273,7 +2273,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                         //$mail->SMTPDebug = 1;
                         $mail->isHTML(true);
                         $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Copy Trader Request" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                        $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Copy Trader Request" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                         $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hello Admin, </h1>';
                         $message .= '<p>' . $_SESSION['username'] . ' has requested to copy trades from <b>' . $row2['t_name'] . '</b></p>';
                         $message .= '<p>Please login to your admin dashboard to approve this request.</p>';
@@ -2308,7 +2308,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                             //$mail->SMTPDebug = 1;
                             $mail->isHTML(true);
                             $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                            $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Copy Trader Request" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                            $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Copy Trader Request" style="max-width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                             $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hello Admin, </h1>';
                             $message .= '<p>' . $_SESSION['username'] . ' has requested to copy trades from <b>' . $row2['t_name'] . '</b></p>';
                             $message .= '<p>Please login to your admin dashboard to approve this request.</p>';
@@ -2409,7 +2409,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                 $mail->isHTML(true);
 
                 $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; font-size:14px; font-family: montserrat; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="Contact form" style="max-width: 140px; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="Contact form" style="max-width: 140px; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                 $message .= '<div style="padding: 10px 20px;" align="left"><h1>Hello Admin, </h1>';
                 $message .= '<p>You have just received a message via the contact form. Details of message below</p>';
                 $message .= '<p><b>Name of Sender: </b>' . $fullname . '</p>';
@@ -3080,7 +3080,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_POST['request'])) {
                     $mail->Subject = 'New Account Created'; // The subject aof the message.
                     $mail->isHTML(true);
                     $message .= '<div align="left" style="margin: 2px 10px; padding: 5px 9px; line-height:1.6rem; border: 2px solid #66f; border-radius: 12px;">';
-                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
+                    $message .= '<center><img src="https://www.' . SITE_ADDRESS . '/assets/images/logo/logo-dark.png" alt="New account created" style="max-width: 200px; height: auto; border-top-left-radius: 12px; border-top-right-radius: 12px;"></center>';
                     $message .= '<div style="padding: 10px 20px;" align="left"><h1>Welcome ' . $fullname . ', </h1>';
                     $message .= '<p>Thank you for registering on ' . SITE_NAME . '.</p>';
                     $message .= '<p>We are thrilled to have you. We hope you have the best trading of experience with us.</p>';
