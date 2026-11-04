@@ -11,9 +11,9 @@ $dbname = "capitalr_home.wealthchainglobal.com";
 $file = dirname(__FILE__);
 include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/PHPMailer/PHPMailerAutoload.php');
 
-define("SITE_URL", "home.wealthchainsglobal.com");
+define("SITE_URL", "home.wealthchainglobal.online");
 
-define("SITE_ADDRESS", "home.wealthchainsglobal.com");
+define("SITE_ADDRESS", "home.wealthchainglobal.online");
 
 define("SITE_NAME", "Wealth Chain Global");
 
@@ -56,13 +56,13 @@ $mail->isSMTP();
 /*
      * Mail Server Configuration
      */
-$mail->Host = 'mail.wealthchainsglobal.com'; // Which SMTP server to use.
+$mail->Host = 'mail.wealthchainglobal.online'; // Which SMTP server to use.
 $mail->Port = 587; // Which port to use, 587 is the default port for TLS security.
 #$mail->SMTPSecure = 'tls'; // Which security method to use. TLS is most secure.
 #$mail->SMTPAuth = true; // Whether you need to login. This is almost always required.
-$mail->Username = "support@home.wealthchainsglobal.com"; //. SITE_ADDRESS; // Your Gmail address.
+$mail->Username = "support@home.wealthchainglobal.online"; //. SITE_ADDRESS; // Your Gmail address.
 $mail->Password = "Omo4real@"; // Your Gmail login password or App Specific Password.
-$mail->setFrom("support@home.wealthchainsglobal.com"); //. SITE_ADDRESS);
+$mail->setFrom("support@home.wealthchainglobal.online"); //. SITE_ADDRESS);
 $mail->CharSet = "UTF-8";
 $mail->Encoding = "base64";
 $message = '';
@@ -75,13 +75,13 @@ $mail2->isSMTP();
 /*
      * Mail2 Server Configuration
      */
-$mail2->Host = 'mail.wealthchainsglobal.com'; // Which SMTP server to use.
+$mail2->Host = 'mail.wealthchainglobal.online'; // Which SMTP server to use.
 $mail2->Port = 587; // Which port to use, 587 is the default port for TLS security.
 #$mail2->SMTPSecure = 'tls'; // Which security method to use. TLS is most secure.
 #$mail2->SMTPAuth = true; // Whether you need to login. This is almost always required.
-$mail2->Username = "support@home.wealthchainsglobal.com"; // . SITE_ADDRESS; // Your Gmail address.
+$mail2->Username = "support@home.wealthchainglobal.online"; // . SITE_ADDRESS; // Your Gmail address.
 $mail2->Password = "Omo4real@"; // Your Gmail login password or App Specific Password.
-$mail2->setFrom('support@home.wealthchainsglobal.com');
+$mail2->setFrom('support@home.wealthchainglobal.online');
 $mail2->CharSet = "UTF-8";
 $mail2->Encoding = "base64";
 $message2 = '';

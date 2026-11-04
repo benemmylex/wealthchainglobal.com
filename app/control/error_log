@@ -1,0 +1,14 @@
+[03-Jul-2026 09:27:32 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[03-Jul-2026 05:27:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/control/header.php(2): require()
+#1 /home/capitalr/repositories/home.wealthchainglobal.com/app/control/sendmoney.php(1): include('/home/capitalr/...')
+#2 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[03-Jul-2026 11:16:33 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[03-Jul-2026 07:16:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/control/header.php(2): require()
+#1 /home/capitalr/repositories/home.wealthchainglobal.com/app/control/users.php(1): include('/home/capitalr/...')
+#2 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45

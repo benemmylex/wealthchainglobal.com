@@ -153,3 +153,49 @@ Stack trace:
 [08-Apr-2026 18:00:07 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
 [09-Apr-2026 18:00:10 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
 [10-Apr-2026 18:01:34 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[29-Apr-2026 18:01:39 America/New_York] User mail error: SMTP Error: The following recipients failed: williamjoe6005@gmail.com: Temporary local problem - please try later
+
+[07-Jun-2026 22:01:04 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[07-Jun-2026 18:01:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(6): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[03-Jul-2026 10:59:30 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[03-Jul-2026 06:59:30 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/header.php(1): include()
+#1 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/profile.php(1): include('/home/capitalr/...')
+#2 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[03-Jul-2026 11:28:26 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[03-Jul-2026 07:28:26 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/verification.php(1): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[16-Jul-2026 10:18:32 America/New_York] User mail error: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+[29-Jul-2026 22:00:37 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[29-Jul-2026 18:00:37 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(6): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[01-Aug-2026 22:00:35 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[01-Aug-2026 18:00:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(6): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[08-Aug-2026 22:00:23 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[08-Aug-2026 18:00:23 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(6): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[10-Aug-2026 22:00:46 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[10-Aug-2026 18:00:46 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/app/account/add-roi.php(6): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45

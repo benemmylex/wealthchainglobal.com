@@ -3,3 +3,32 @@
 [06-Feb-2026 09:08:04 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php74/sess_598b92a8757e3c25762b8b9441cdf2e5, O_RDWR) failed: No such file or directory (2) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
 [06-Feb-2026 09:08:04 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php74) in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
 [14-Feb-2026 01:51:20 America/New_York] PHP Warning:  unlink(): No such file or directory in /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php on line 1072
+[03-Jul-2026 11:29:18 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[03-Jul-2026 07:29:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php(2): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[03-Jul-2026 11:52:29 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[03-Jul-2026 07:52:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/ops/adminauth.php(2): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[03-Jul-2026 11:52:35 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[03-Jul-2026 07:52:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/ops/adminauth.php(2): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[07-Aug-2026 20:05:41 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 40
+[07-Aug-2026 16:05:41 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php:45
+Stack trace:
+#0 /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php(2): include()
+#1 {main}
+  thrown in /home/capitalr/repositories/home.wealthchainglobal.com/ops/connect.php on line 45
+[10-Oct-2026 15:37:24 America/New_York] PHP Warning:  unlink(): No such file or directory in /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php on line 1072
+[10-Oct-2026 15:37:26 America/New_York] PHP Warning:  unlink(): No such file or directory in /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php on line 1072
+[10-Oct-2026 15:37:27 America/New_York] PHP Warning:  unlink(): No such file or directory in /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php on line 1072
+[10-Oct-2026 15:37:27 America/New_York] PHP Warning:  unlink(): No such file or directory in /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php on line 1072
+[21-Oct-2026 15:15:30 America/New_York] PHP Warning:  unlink(): No such file or directory in /home/capitalr/repositories/home.wealthchainglobal.com/ops/users.php on line 1072

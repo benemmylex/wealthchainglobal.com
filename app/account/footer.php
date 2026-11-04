@@ -241,7 +241,7 @@
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
     var _smartsupp = _smartsupp || {};
-    _smartsupp.key = '35d12ac95bc66d7c038e1699a204e5c21517fdb5';
+    _smartsupp.key = '27981e886a77073f998e37b8abf74a80bd2c0434';
     window.smartsupp || (function(d) {
         var s, c, o = smartsupp = function() {
             o._.push(arguments)
